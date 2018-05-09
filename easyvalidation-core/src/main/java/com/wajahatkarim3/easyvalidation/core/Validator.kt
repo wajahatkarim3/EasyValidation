@@ -8,7 +8,7 @@ package com.wajahatkarim3.easyvalidation.core
  * @author Wajahat Karim
  * @date 08/05/18
  */
-class Validator
+class Validator(val text: String)
 {
     /*
      * Boolean to determine whether all the validations have passed successfully!
@@ -16,6 +16,11 @@ class Validator
      * false and result is returned to developer
      */
     private var isValid = true
+
+    /*
+     The error message to be sent in the error callback
+     */
+    private var errorMessage: String = ""
 
     /*
      * In case of validation error or failure, this callback is invoked
@@ -28,8 +33,22 @@ class Validator
     var successCallback: (() -> Unit)? = null
 
     /*
-    * User settable limits for the numbers of characters that the string can contain
-    * */
+     * User settable limits for the numbers of characters that the string can contain
+     */
     private var MINIMUM_LENGTH = 0
     private var MAXIMUM_LENGTH = Int.MAX_VALUE
+
+    /*
+     * Performs the validation check and returns true or false.
+     * Also invokes success and error callbacks if non null.
+     */
+    fun check() : Boolean
+    {
+        if (isValid)
+            successCallback?.invoke()
+        else
+            errorCallback?.invoke(errorMessage)
+
+        return isValid
+    }
 }
