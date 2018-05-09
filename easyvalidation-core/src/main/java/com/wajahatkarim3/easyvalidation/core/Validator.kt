@@ -1,5 +1,7 @@
 package com.wajahatkarim3.easyvalidation.core
 
+import com.wajahatkarim3.easyvalidation.core.rules.EmptyRule
+
 /**
  * The core Validator builder class for validation operations and checks!
  *
@@ -50,5 +52,18 @@ class Validator(val text: String)
             errorCallback?.invoke(errorMessage)
 
         return isValid
+    }
+
+    fun empty() : Validator
+    {
+        if (EmptyRule(text).validate())
+            setError("Cannot be empty!")
+        return this
+    }
+
+    fun setError(message: String)
+    {
+        isValid = false
+        errorMessage = message
     }
 }
