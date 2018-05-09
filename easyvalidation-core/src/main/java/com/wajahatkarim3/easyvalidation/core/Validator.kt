@@ -17,4 +17,19 @@ class Validator
      */
     private var isValid = true
 
+    /*
+     * In case of validation error or failure, this callback is invoked
+     */
+    var errorCallback: ((message: String) -> Unit)? = null
+
+    /*
+     * In case of validation success, this callback is invoked
+     */
+    var successCallback: (() -> Unit)? = null
+
+    /*
+    * User settable limits for the numbers of characters that the string can contain
+    * */
+    private var MINIMUM_LENGTH = 0
+    private var MAXIMUM_LENGTH = Int.MAX_VALUE
 }
