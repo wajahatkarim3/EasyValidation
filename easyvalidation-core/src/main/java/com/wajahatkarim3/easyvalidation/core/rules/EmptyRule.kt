@@ -1,6 +1,8 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
-class EmptyRule(text: String) : BaseRule(text)
+class EmptyRule : BaseRule
 {
-    override fun validate(): Boolean = text.isEmpty()
+    override fun validate(text: String): Boolean = !text.isEmpty()
+
+    override fun getErrorMessage(): String = "Can't be empty!"
 }

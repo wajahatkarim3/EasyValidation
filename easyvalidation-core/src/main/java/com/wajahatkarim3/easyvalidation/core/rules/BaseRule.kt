@@ -1,7 +1,8 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
-abstract class BaseRule(val text: String) {
+interface BaseRule {
 
-    abstract fun validate() : Boolean
+    fun validate(text: String) : Boolean
+    fun getErrorMessage() : String
 
 }
