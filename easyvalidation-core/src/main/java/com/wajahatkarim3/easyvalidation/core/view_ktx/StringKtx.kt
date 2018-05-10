@@ -37,10 +37,20 @@ fun String.validNumber() : Boolean
 
 fun String.greaterThan(number: Number) : Boolean
 {
-    return validator().validNumber().greaterThan(number).check()
+    return validator().greaterThan(number).check()
 }
 
 fun String.greaterThanOrEqual(number: Number) : Boolean
 {
-    return validator().validNumber().greaterThanOrEqual(number).check()
+    return validator().greaterThanOrEqual(number).check()
+}
+
+fun String.lessThan(number: Number) : Boolean
+{
+    return validator().lessThan(number).check()
+}
+
+fun String.lessThanOrEqual(number: Number) : Boolean
+{
+    return validator().lessThanOrEqual(number).check()
 }

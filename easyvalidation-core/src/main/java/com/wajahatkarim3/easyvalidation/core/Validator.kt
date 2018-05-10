@@ -132,6 +132,18 @@ class Validator(val text: String)
         return this
     }
 
+    fun lessThan(number: Number) : Validator
+    {
+        addRule(LessThanRule(number))
+        return this
+    }
+
+    fun lessThanOrEqual(number: Number) : Validator
+    {
+        addRule(LessThanOrEqualRule(number))
+        return this
+    }
+
     fun regex(pattern: String) : Validator
     {
         addRule(RegexRule(pattern))

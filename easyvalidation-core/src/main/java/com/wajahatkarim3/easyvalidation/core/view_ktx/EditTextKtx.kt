@@ -38,10 +38,20 @@ fun EditText.validNumber() : Boolean
 
 fun EditText.greaterThan(number: Number) : Boolean
 {
-    return validator().validNumber().greaterThan(number).check()
+    return validator().greaterThan(number).check()
 }
 
 fun EditText.greaterThanOrEqual(number: Number) : Boolean
 {
-    return validator().validNumber().greaterThanOrEqual(number).check()
+    return validator().greaterThanOrEqual(number).check()
+}
+
+fun EditText.lessThan(number: Number) : Boolean
+{
+    return validator().lessThan(number).check()
+}
+
+fun EditText.lessThanOrEqual(number: Number) : Boolean
+{
+    return validator().lessThanOrEqual(number).check()
 }

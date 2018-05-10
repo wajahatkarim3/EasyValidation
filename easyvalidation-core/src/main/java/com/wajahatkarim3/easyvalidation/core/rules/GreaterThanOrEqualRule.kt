@@ -13,6 +13,10 @@ import java.text.NumberFormat
 class GreaterThanOrEqualRule(val target: Number) : BaseRule {
 
     override fun validate(text: String): Boolean {
+
+        if (text.isEmpty())
+            return false
+
         // Negative
         if (text.startsWith("-"))
         {
@@ -20,7 +24,8 @@ class GreaterThanOrEqualRule(val target: Number) : BaseRule {
             if (txtNum.validNumber())
             {
                 var number = NumberFormat.getNumberInstance().parse(txtNum)
-                return (number.toFloat() <= -1*target.toFloat())
+                number = number.toFloat() * -1
+                return (number.toFloat() >= target.toFloat())
             }
             return false
         }

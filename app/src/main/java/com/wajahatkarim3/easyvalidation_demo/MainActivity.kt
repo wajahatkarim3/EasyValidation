@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                     //        .check()
 
 
-                    if (edittext.greaterThanOrEqual(10))
+                    if (edittext.greaterThanOrEqual(-10) == false)
                         edittext.error = "Number greater than or equal to 10"
 
                     //if (edittext.validEmail() == false)
