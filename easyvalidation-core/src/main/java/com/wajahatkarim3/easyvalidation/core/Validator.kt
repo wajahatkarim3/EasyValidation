@@ -113,6 +113,12 @@ class Validator(val text: String)
         return this
     }
 
+    fun validNumber() : Validator
+    {
+        addRule(ValidNumber())
+        return this
+    }
+
     fun regex(pattern: String) : Validator
     {
         addRule(RegexRule(pattern))

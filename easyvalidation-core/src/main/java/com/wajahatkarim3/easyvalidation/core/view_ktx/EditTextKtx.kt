@@ -28,3 +28,8 @@ fun EditText.validEmail() : Boolean
 {
     return validator().validEmail().check()
 }
+
+fun EditText.validNumber() : Boolean
+{
+    return validator().validNumber().check()
+}
