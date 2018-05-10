@@ -11,15 +11,15 @@ fun EditText.validator() : Validator
 
 fun EditText.nonEmpty() : Boolean
 {
-    return !validator().nonEmpty().check()
+    return validator().nonEmpty().check()
 }
 
 fun EditText.minLength(minLength: Int) : Boolean
 {
-    return !validator().minLength(minLength).check()
+    return validator().minLength(minLength).check()
 }
 
 fun EditText.maxLength(maxLength: Int) : Boolean
 {
-    return !validator().maxLength(maxLength).check()
+    return validator().maxLength(maxLength).check()
 }

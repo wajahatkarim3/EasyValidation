@@ -12,6 +12,6 @@ class MaxLengthRule(val maxLength: Int) : BaseRule {
     }
 
     override fun getErrorMessage(): String {
-        return "Length can't be greater than $maxLength"
+        return "Length should be less than or equal to $maxLength"
     }
 }

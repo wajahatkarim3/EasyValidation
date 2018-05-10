@@ -22,15 +22,15 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
 
             // Validator way
-            edittext.validator()
-                    .nonEmpty()
-                    .addErrorCallback {
-                        edittext.error = it
-                    }
-                    .check()
+            //edittext.validator()
+            //        .nonEmpty()
+            //        .addErrorCallback {
+            //            edittext.error = it
+            //        }
+            //        .check()
 
             // Extension Way
-            if (edittext.nonEmpty())
+            if (edittext.nonEmpty() == false)
                edittext.error = "Cannot be empty! - Check"
         }
 
@@ -38,18 +38,19 @@ class MainActivity : AppCompatActivity() {
                 .setOnClickListener {
 
                     // Validator way
-                    edittext.validator()
-                            .nonEmpty()
-                            .minLength(3)
-                            .addErrorCallback {
-                                edittext.error = it
-                            }
-                            .check()
+                    //edittext.validator()
+                    //        .nonEmpty()
+                    //        .minLength(3)
+                    //        .maxLength(5)
+                    //        .addErrorCallback {
+                    //            edittext.error = it
+                    //        }
+                    //        .check()
 
 
                     // Extension way
-                    //if (edittext.minLength(3))
-                    //    edittext.error = "Should be greater than 3"
+                    if (edittext.minLength(3) == false)
+                        edittext.error = "Should be greater than 3"
                 }
 
     }
