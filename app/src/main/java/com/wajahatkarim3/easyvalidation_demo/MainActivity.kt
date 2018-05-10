@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
+import com.wajahatkarim3.easyvalidation.core.view_ktx.minLength
 import com.wajahatkarim3.easyvalidation.core.view_ktx.nonEmpty
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validator
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,10 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         var edittext = findViewById<EditText>(R.id.editText)
 
-        var button = findViewById<Button>(R.id.btnValidate)
+        var button = findViewById<Button>(R.id.btnEmpty)
         button.setOnClickListener {
 
-
+            // Validator way
             edittext.validator()
                     .nonEmpty()
                     .addErrorCallback {
@@ -27,10 +29,28 @@ class MainActivity : AppCompatActivity() {
                     }
                     .check()
 
-
+            // Extension Way
             if (edittext.nonEmpty())
                edittext.error = "Cannot be empty! - Check"
         }
+
+        findViewById<Button>(R.id.btnMinLength)
+                .setOnClickListener {
+
+                    // Validator way
+                    edittext.validator()
+                            .nonEmpty()
+                            .minLength(3)
+                            .addErrorCallback {
+                                edittext.error = it
+                            }
+                            .check()
+
+
+                    // Extension way
+                    //if (edittext.minLength(3))
+                    //    edittext.error = "Should be greater than 3"
+                }
 
     }
 }

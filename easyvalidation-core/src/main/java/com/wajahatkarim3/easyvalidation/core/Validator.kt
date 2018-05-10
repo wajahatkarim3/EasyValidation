@@ -1,6 +1,8 @@
 package com.wajahatkarim3.easyvalidation.core
 
 import com.wajahatkarim3.easyvalidation.core.rules.BaseRule
+import com.wajahatkarim3.easyvalidation.core.rules.MaxLengthRule
+import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
 import com.wajahatkarim3.easyvalidation.core.rules.NonEmptyRule
 
 /**
@@ -70,12 +72,6 @@ class Validator(val text: String)
         return isValid
     }
 
-    fun nonEmpty() : Validator
-    {
-        addRule(NonEmptyRule())
-        return this
-    }
-
     fun setError(message: String)
     {
         isValid = false
@@ -91,6 +87,26 @@ class Validator(val text: String)
     fun addErrorCallback(callback: (message: String) -> Unit) : Validator
     {
         errorCallback = callback
+        return this
+    }
+
+    // Rules
+
+    fun nonEmpty() : Validator
+    {
+        addRule(NonEmptyRule())
+        return this
+    }
+
+    fun minLength(length: Int) : Validator
+    {
+        addRule(MinLengthRule(length))
+        return this
+    }
+
+    fun maxLength(length: Int) : Validator
+    {
+        addRule(MaxLengthRule(length))
         return this
     }
 }
