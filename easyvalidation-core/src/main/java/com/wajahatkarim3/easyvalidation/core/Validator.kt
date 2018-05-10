@@ -88,7 +88,6 @@ class Validator(val text: String)
     }
 
     // Rules
-
     fun nonEmpty() : Validator
     {
         addRule(NonEmptyRule())
@@ -115,9 +114,10 @@ class Validator(val text: String)
 
     fun validNumber() : Validator
     {
-        addRule(ValidNumber())
+        addRule(ValidNumberRule())
         return this
     }
+
 
     fun regex(pattern: String) : Validator
     {

@@ -7,9 +7,9 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class ValidNumber : BaseRule {
+class ValidNumberRule : BaseRule {
 
-    override fun validate(text: String): Boolean = Validator(text).regex("\\d+").check()
+    override fun validate(text: String): Boolean = Validator(text).regex("^[1-9]\\d*(\\.\\d+)?$").check()
 
     override fun getErrorMessage(): String = "Invalid Number!"
 }
