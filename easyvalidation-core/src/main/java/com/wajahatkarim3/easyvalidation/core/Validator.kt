@@ -1,7 +1,7 @@
 package com.wajahatkarim3.easyvalidation.core
 
 import com.wajahatkarim3.easyvalidation.core.rules.BaseRule
-import com.wajahatkarim3.easyvalidation.core.rules.EmptyRule
+import com.wajahatkarim3.easyvalidation.core.rules.NonEmptyRule
 
 /**
  * The core Validator builder class for validation operations and checks!
@@ -70,9 +70,9 @@ class Validator(val text: String)
         return isValid
     }
 
-    fun empty() : Validator
+    fun nonEmpty() : Validator
     {
-        addRule(EmptyRule())
+        addRule(NonEmptyRule())
         return this
     }
 
