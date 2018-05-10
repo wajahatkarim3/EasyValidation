@@ -6,18 +6,11 @@ import java.math.BigInteger
 import java.text.NumberFormat
 
 /**
- * Returns false if the text is number less than the given target number
+ * Returns false if the text is number less than or equal to the given target number
  *
  * @author Wajahat Karim
  */
-class GreaterThanRule : BaseRule {
-
-    var target: Number = 0
-
-    constructor(targetNum: Number)
-    {
-        target = targetNum
-    }
+class GreaterThanOrEqualRule(val target: Number) : BaseRule {
 
     override fun validate(text: String): Boolean {
         // Negative
@@ -27,7 +20,7 @@ class GreaterThanRule : BaseRule {
             if (txtNum.validNumber())
             {
                 var number = NumberFormat.getNumberInstance().parse(txtNum)
-                return (number.toFloat() < -1*target.toFloat())
+                return (number.toFloat() <= -1*target.toFloat())
             }
             return false
         }
@@ -36,12 +29,12 @@ class GreaterThanRule : BaseRule {
             if (text.validNumber())
             {
                 var number = NumberFormat.getNumberInstance().parse(text)
-                return (number.toFloat() > target.toFloat())
+                return (number.toFloat() >= target.toFloat())
             }
             return false
         }
     }
 
-    override fun getErrorMessage(): String = "Should be greater than $target"
+    override fun getErrorMessage(): String = "Should be greater than or equal to $target"
 
 }

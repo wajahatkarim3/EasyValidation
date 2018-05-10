@@ -126,33 +126,9 @@ class Validator(val text: String)
         return this
     }
 
-    fun greaterThan(number: Double) : Validator
+    fun greaterThanOrEqual(number: Number) : Validator
     {
-        addRule(GreaterThanRule(number))
-        return this
-    }
-
-    fun greaterThan(number: Float) : Validator
-    {
-        addRule(GreaterThanRule(number))
-        return this
-    }
-
-    fun greaterThan(number: Long) : Validator
-    {
-        addRule(GreaterThanRule(number))
-        return this
-    }
-
-    fun greaterThan(number: BigDecimal) : Validator
-    {
-        addRule(GreaterThanRule(number))
-        return this
-    }
-
-    fun greaterThan(number: BigInteger) : Validator
-    {
-        addRule(GreaterThanRule(number))
+        addRule(GreaterThanOrEqualRule(number))
         return this
     }
 

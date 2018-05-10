@@ -39,3 +39,8 @@ fun String.greaterThan(number: Number) : Boolean
 {
     return validator().validNumber().greaterThan(number).check()
 }
+
+fun String.greaterThanOrEqual(number: Number) : Boolean
+{
+    return validator().validNumber().greaterThanOrEqual(number).check()
+}

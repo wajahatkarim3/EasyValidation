@@ -40,3 +40,8 @@ fun EditText.greaterThan(number: Number) : Boolean
 {
     return validator().validNumber().greaterThan(number).check()
 }
+
+fun EditText.greaterThanOrEqual(number: Number) : Boolean
+{
+    return validator().validNumber().greaterThanOrEqual(number).check()
+}
