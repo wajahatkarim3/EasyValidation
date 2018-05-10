@@ -1,2 +1,38 @@
 # EasyValidation
 A text and input validation library in Kotlin for Android
+
+## How it works
+
+There are two ways to validate ```EditText```.
+
+### Validator Way
+The ```Validator``` way is a lot more customizable and allows you add as many rules as you like. Some rules are already developed in the library. Here is an example, which tells that ```EditText``` cannot be empty and will have number of characters between 3 and 10. 
+
+```kotlin
+
+var edittext = findViewById<EditText>(R.id.myeditid)
+edittext.validator()
+        .nonEmpty()       // Check if the EditText is not empty
+        .minLength(3)     // Check if the EditText length is greater than or equal to 3
+        .maxLength(10)    // Check if the EditText length is less than or equal to 10
+        .addErrorCallback { message ->
+              edittext.error = message        // Show any error or toast or snack or dialog etc. here
+        }
+        .check()          // Performs validation check
+```
+
+### Extension Way
+There's another smaller and easier way. This uses kotlin extensions. This library comes with already built-in rules' extensions. For the above same example, validation will be like this:
+
+```kotlin
+var edittext = findViewById<EditText>(R.id.myeditid)
+if (edittext.nonEmpty() && edittext.minLength(3) && edittext.maxLength(10))
+{
+    // The EditText satisfies all checks. So you are free to use the EditText text.
+}
+else 
+{
+    // Any one condition from empty or minimum length or maximum length has returned false. 
+    // Show any error or toast or snack or dialog etc. here
+}
+```
