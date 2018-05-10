@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
-import com.wajahatkarim3.easyvalidation.core.view_ktx.minLength
-import com.wajahatkarim3.easyvalidation.core.view_ktx.nonEmpty
-import com.wajahatkarim3.easyvalidation.core.view_ktx.validator
+import com.wajahatkarim3.easyvalidation.core.view_ktx.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -51,6 +49,12 @@ class MainActivity : AppCompatActivity() {
                     // Extension way
                     if (edittext.minLength(3) == false)
                         edittext.error = "Should be greater than 3"
+                }
+
+        findViewById<Button>(R.id.btnEmail)
+                .setOnClickListener {
+                    if (edittext.validEmail() == false)
+                        edittext.error = "Invalid email address!"
                 }
 
     }

@@ -1,9 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core
 
-import com.wajahatkarim3.easyvalidation.core.rules.BaseRule
-import com.wajahatkarim3.easyvalidation.core.rules.MaxLengthRule
-import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
-import com.wajahatkarim3.easyvalidation.core.rules.NonEmptyRule
+import com.wajahatkarim3.easyvalidation.core.rules.*
 
 /**
  * The core Validator builder class for validation operations and checks!
@@ -107,6 +104,18 @@ class Validator(val text: String)
     fun maxLength(length: Int) : Validator
     {
         addRule(MaxLengthRule(length))
+        return this
+    }
+
+    fun validEmail() : Validator
+    {
+        addRule(EmailRule())
+        return this
+    }
+
+    fun regex(pattern: String) : Validator
+    {
+        addRule(RegexRule(pattern))
         return this
     }
 }

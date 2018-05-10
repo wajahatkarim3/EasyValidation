@@ -23,3 +23,8 @@ fun EditText.maxLength(maxLength: Int) : Boolean
 {
     return validator().maxLength(maxLength).check()
 }
+
+fun EditText.validEmail() : Boolean
+{
+    return validator().validEmail().check()
+}
