@@ -2,6 +2,8 @@ package com.wajahatkarim3.easyvalidation.core.view_ktx
 
 import android.widget.EditText
 import com.wajahatkarim3.easyvalidation.core.Validator
+import java.math.BigDecimal
+import java.math.BigInteger
 
 fun String.validator() : Validator
 {
@@ -31,4 +33,9 @@ fun String.validEmail() : Boolean
 fun String.validNumber() : Boolean
 {
     return validator().validNumber().check()
+}
+
+fun String.greaterThan(number: Number) : Boolean
+{
+    return validator().validNumber().greaterThan(number).check()
 }

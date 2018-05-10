@@ -1,6 +1,8 @@
 package com.wajahatkarim3.easyvalidation.core
 
 import com.wajahatkarim3.easyvalidation.core.rules.*
+import java.math.BigDecimal
+import java.math.BigInteger
 
 /**
  * The core Validator builder class for validation operations and checks!
@@ -118,6 +120,41 @@ class Validator(val text: String)
         return this
     }
 
+    fun greaterThan(number: Number) : Validator
+    {
+        addRule(GreaterThanRule(number))
+        return this
+    }
+
+    fun greaterThan(number: Double) : Validator
+    {
+        addRule(GreaterThanRule(number))
+        return this
+    }
+
+    fun greaterThan(number: Float) : Validator
+    {
+        addRule(GreaterThanRule(number))
+        return this
+    }
+
+    fun greaterThan(number: Long) : Validator
+    {
+        addRule(GreaterThanRule(number))
+        return this
+    }
+
+    fun greaterThan(number: BigDecimal) : Validator
+    {
+        addRule(GreaterThanRule(number))
+        return this
+    }
+
+    fun greaterThan(number: BigInteger) : Validator
+    {
+        addRule(GreaterThanRule(number))
+        return this
+    }
 
     fun regex(pattern: String) : Validator
     {

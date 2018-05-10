@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.wajahatkarim3.easyvalidation.core.rules.GreaterThanRule
 import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -53,8 +54,20 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnEmail)
                 .setOnClickListener {
-                    if (edittext.validEmail() == false)
-                        edittext.error = "Invalid email address!"
+
+                    //edittext.validator()
+                    //        .addRule(GreaterThanRule(-10.4))
+                    //        .addErrorCallback {
+                    //            edittext.error = it
+                    //        }
+                    //        .check()
+
+
+                    if (edittext.greaterThan(10))
+                        edittext.error = "Number greater than 10.6"
+
+                    //if (edittext.validEmail() == false)
+                    //    edittext.error = "Invalid email address!"
                 }
 
     }
