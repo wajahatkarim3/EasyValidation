@@ -160,6 +160,11 @@ fun String.creditCardNumberWithDashes() : Boolean
     return validator().creditCardNumberWithDashes().check()
 }
 
+fun String.validUrl() : Boolean
+{
+    return validator().validUrl().check()
+}
+
 fun String.regex(pattern: String) : Boolean
 {
     return validator().regex(pattern).check()

@@ -276,6 +276,12 @@ class Validator(val text: String)
         return this
     }
 
+    fun validUrl() : Validator
+    {
+        addRule(ValidUrlRule())
+        return this
+    }
+
     fun regex(pattern: String) : Validator
     {
         addRule(RegexRule(pattern))

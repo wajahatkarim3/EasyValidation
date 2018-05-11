@@ -162,6 +162,11 @@ fun EditText.creditCardNumberWithDashes() : Boolean
     return validator().creditCardNumberWithDashes().check()
 }
 
+fun EditText.validUrl() : Boolean
+{
+    return validator().validUrl().check()
+}
+
 fun EditText.regex(pattern: String) : Boolean
 {
     return validator().regex(pattern).check()
