@@ -55,6 +55,11 @@ fun String.lessThanOrEqual(number: Number) : Boolean
     return validator().lessThanOrEqual(number).check()
 }
 
+fun String.numberEqualTo(number: Number) : Boolean
+{
+    return validator().numberEqualTo(number).check()
+}
+
 fun String.allUperCase() : Boolean
 {
     return validator().allUpperCase().check()
@@ -90,12 +95,72 @@ fun String.startWithNonNumber() : Boolean
     return validator().startWithNonNumber().check()
 }
 
+fun String.noNumbers() : Boolean
+{
+    return validator().noNumbers().check()
+}
+
+fun String.onlyNumbers() : Boolean
+{
+    return validator().onlyNumbers().check()
+}
+
 fun String.noSpecialCharacters() : Boolean
 {
     return validator().noSpecialCharacters().check()
 }
 
-fun String.atleastOneSpecial() : Boolean
+fun String.atleastOneSpecialCharacters() : Boolean
 {
     return validator().atleastOneSpecialCharacters().check()
+}
+
+fun String.textEqualTo(target: String) : Boolean
+{
+    return validator().textEqualTo(target).check()
+}
+
+fun String.textNotEqualTo(target: String) : Boolean
+{
+    return validator().textNotEqualTo(target).check()
+}
+
+fun String.startsWith(target: String) : Boolean
+{
+    return validator().startsWith(target).check()
+}
+
+fun String.endsWith(target: String) : Boolean
+{
+    return validator().endsWith(target).check()
+}
+
+fun String.contains(target: String) : Boolean
+{
+    return validator().contains(target).check()
+}
+
+fun String.notContains(target: String) : Boolean
+{
+    return validator().notContains(target).check()
+}
+
+fun String.creditCardNumber() : Boolean
+{
+    return validator().creditCardNumber().check()
+}
+
+fun String.creditCardNumberWithSpaces() : Boolean
+{
+    return validator().creditCardNumberWithSpaces().check()
+}
+
+fun String.creditCardNumberWithDashes() : Boolean
+{
+    return validator().creditCardNumberWithDashes().check()
+}
+
+fun String.regex(pattern: String) : Boolean
+{
+    return validator().regex(pattern).check()
 }

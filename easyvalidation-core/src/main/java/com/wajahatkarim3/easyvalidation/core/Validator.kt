@@ -144,6 +144,12 @@ class Validator(val text: String)
         return this
     }
 
+    fun numberEqualTo(number: Number) : Validator
+    {
+        addRule(NumberEqualToRule(number))
+        return this
+    }
+
     fun allLowerCase() : Validator
     {
         addRule(AllLowerCaseRule())
@@ -174,6 +180,18 @@ class Validator(val text: String)
         return this
     }
 
+    fun noNumbers() : Validator
+    {
+        addRule(NoNumbersRule())
+        return this
+    }
+
+    fun onlyNumbers() : Validator
+    {
+        addRule(OnlyNumbersRule())
+        return this
+    }
+
     fun startWithNumber() : Validator
     {
         addRule(StartsWithNumberRule())
@@ -195,6 +213,66 @@ class Validator(val text: String)
     fun atleastOneSpecialCharacters() : Validator
     {
         addRule(AtleastOneSpecialCharacterRule())
+        return this
+    }
+
+    fun textEqualTo(target: String) : Validator
+    {
+        addRule(TextEqualToRule(target))
+        return this
+    }
+
+    fun textNotEqualTo(target: String) : Validator
+    {
+        addRule(TextNotEqualToRule(target))
+        return this
+    }
+
+    fun startsWith(target: String) : Validator
+    {
+        addRule(StartsWithRule(target))
+        return this
+    }
+
+    fun endsWith(target: String) : Validator
+    {
+        addRule(EndsWithRule(target))
+        return this
+    }
+
+    fun contains(target: String) : Validator
+    {
+        addRule(ContainsRule(target))
+        return this
+    }
+
+    fun notContains(target: String) : Validator
+    {
+        addRule(NotContainsRule(target))
+        return this
+    }
+
+    fun creditCardNumber() : Validator
+    {
+        addRule(MinLengthRule(16))
+        addRule(MaxLengthRule(16))
+        addRule(CreditCardRule())
+        return this
+    }
+
+    fun creditCardNumberWithSpaces() : Validator
+    {
+        addRule(MinLengthRule(19))
+        addRule(MaxLengthRule(19))
+        addRule(CreditCardWithSpacesRule())
+        return this
+    }
+
+    fun creditCardNumberWithDashes() : Validator
+    {
+        addRule(MinLengthRule(19))
+        addRule(MaxLengthRule(19))
+        addRule(CreditCardWithDashesRule())
         return this
     }
 

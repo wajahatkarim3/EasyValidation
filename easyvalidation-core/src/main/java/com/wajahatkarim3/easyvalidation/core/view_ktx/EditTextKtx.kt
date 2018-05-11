@@ -4,6 +4,7 @@ import android.widget.EditText
 import com.wajahatkarim3.easyvalidation.core.Validator
 import java.math.BigDecimal
 import java.math.BigInteger
+import java.util.regex.Pattern
 import kotlin.math.max
 
 fun EditText.validator() : Validator
@@ -56,6 +57,11 @@ fun EditText.lessThanOrEqual(number: Number) : Boolean
     return validator().lessThanOrEqual(number).check()
 }
 
+fun EditText.numberEqualTo(number: Number) : Boolean
+{
+    return validator().numberEqualTo(number).check()
+}
+
 fun EditText.allUperCase() : Boolean
 {
     return validator().allUpperCase().check()
@@ -91,12 +97,72 @@ fun EditText.startWithNonNumber() : Boolean
     return validator().startWithNonNumber().check()
 }
 
+fun EditText.noNumbers() : Boolean
+{
+    return validator().noNumbers().check()
+}
+
+fun EditText.onlyNumbers() : Boolean
+{
+    return validator().onlyNumbers().check()
+}
+
 fun EditText.noSpecialCharacters() : Boolean
 {
     return validator().noSpecialCharacters().check()
 }
 
-fun EditText.atleastOneSpecial() : Boolean
+fun EditText.atleastOneSpecialCharacters() : Boolean
 {
     return validator().atleastOneSpecialCharacters().check()
+}
+
+fun EditText.textEqualTo(target: String) : Boolean
+{
+    return validator().textEqualTo(target).check()
+}
+
+fun EditText.textNotEqualTo(target: String) : Boolean
+{
+    return validator().textNotEqualTo(target).check()
+}
+
+fun EditText.startsWith(target: String) : Boolean
+{
+    return validator().startsWith(target).check()
+}
+
+fun EditText.endssWith(target: String) : Boolean
+{
+    return validator().endsWith(target).check()
+}
+
+fun EditText.contains(target: String) : Boolean
+{
+    return validator().contains(target).check()
+}
+
+fun EditText.notContains(target: String) : Boolean
+{
+    return validator().notContains(target).check()
+}
+
+fun EditText.creditCardNumber() : Boolean
+{
+    return validator().creditCardNumber().check()
+}
+
+fun EditText.creditCardNumberWithSpaces() : Boolean
+{
+    return validator().creditCardNumberWithSpaces().check()
+}
+
+fun EditText.creditCardNumberWithDashes() : Boolean
+{
+    return validator().creditCardNumberWithDashes().check()
+}
+
+fun EditText.regex(pattern: String) : Boolean
+{
+    return validator().regex(pattern).check()
 }

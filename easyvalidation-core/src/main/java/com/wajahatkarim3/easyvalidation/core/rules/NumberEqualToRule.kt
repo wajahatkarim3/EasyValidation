@@ -10,7 +10,7 @@ import java.text.NumberFormat
  *
  * @author Wajahat Karim
  */
-class EqualToRule(val target: Number) : BaseRule {
+class NumberEqualToRule(val target: Number) : BaseRule {
 
     override fun validate(text: String): Boolean {
 

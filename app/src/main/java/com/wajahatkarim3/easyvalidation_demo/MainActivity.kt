@@ -66,9 +66,11 @@ class MainActivity : AppCompatActivity() {
                     //if (edittext.greaterThanOrEqual(-10) == false)
                     //    edittext.error = "Number greater than or equal to 10"
 
-                    if (edittext.atleastOneSpecial() == false)
-                        edittext.error = "Should contain atleast 1 special characters"
+                    //if (edittext.textEqualTo("Hell0") == false)
+                    //    edittext.error = "Should be same as Hell0"
 
+                    if (edittext.creditCardNumberWithSpaces() == false)
+                        edittext.error = "Invalid credit card number!"
 
                     //if (edittext.validEmail() == false)
                     //    edittext.error = "Invalid email address!"
