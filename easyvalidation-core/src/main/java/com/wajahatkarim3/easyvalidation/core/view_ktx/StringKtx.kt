@@ -79,3 +79,23 @@ fun String.atleastOneNumber() : Boolean
 {
     return validator().atleastOneNumber().check()
 }
+
+fun String.startWithNumber() : Boolean
+{
+    return validator().startWithNumber().check()
+}
+
+fun String.startWithNonNumber() : Boolean
+{
+    return validator().startWithNonNumber().check()
+}
+
+fun String.noSpecialCharacters() : Boolean
+{
+    return validator().noSpecialCharacters().check()
+}
+
+fun String.atleastOneSpecial() : Boolean
+{
+    return validator().atleastOneSpecialCharacters().check()
+}

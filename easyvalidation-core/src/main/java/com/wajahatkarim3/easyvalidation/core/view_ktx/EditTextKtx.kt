@@ -80,3 +80,23 @@ fun EditText.atleastOneNumber() : Boolean
 {
     return validator().atleastOneNumber().check()
 }
+
+fun EditText.startWithNumber() : Boolean
+{
+    return validator().startWithNumber().check()
+}
+
+fun EditText.startWithNonNumber() : Boolean
+{
+    return validator().startWithNonNumber().check()
+}
+
+fun EditText.noSpecialCharacters() : Boolean
+{
+    return validator().noSpecialCharacters().check()
+}
+
+fun EditText.atleastOneSpecial() : Boolean
+{
+    return validator().atleastOneSpecialCharacters().check()
+}

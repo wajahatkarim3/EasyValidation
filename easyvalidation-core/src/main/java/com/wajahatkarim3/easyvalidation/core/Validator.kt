@@ -174,6 +174,30 @@ class Validator(val text: String)
         return this
     }
 
+    fun startWithNumber() : Validator
+    {
+        addRule(StartsWithNumberRule())
+        return this
+    }
+
+    fun startWithNonNumber() : Validator
+    {
+        addRule(StartsWithNoNumberRule())
+        return this
+    }
+
+    fun noSpecialCharacters() : Validator
+    {
+        addRule(NoSpecialCharacterRule())
+        return this
+    }
+
+    fun atleastOneSpecialCharacters() : Validator
+    {
+        addRule(AtleastOneSpecialCharacterRule())
+        return this
+    }
+
     fun regex(pattern: String) : Validator
     {
         addRule(RegexRule(pattern))
