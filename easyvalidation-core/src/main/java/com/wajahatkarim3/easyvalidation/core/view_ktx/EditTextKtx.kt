@@ -55,3 +55,28 @@ fun EditText.lessThanOrEqual(number: Number) : Boolean
 {
     return validator().lessThanOrEqual(number).check()
 }
+
+fun EditText.allUperCase() : Boolean
+{
+    return validator().allUpperCase().check()
+}
+
+fun EditText.allLowerCase() : Boolean
+{
+    return validator().allLowerCase().check()
+}
+
+fun EditText.atleastOneUpperCase() : Boolean
+{
+    return validator().atleastOneUpperCase().check()
+}
+
+fun EditText.atleastOneLowerCase() : Boolean
+{
+    return validator().atleastOneLowerCase().check()
+}
+
+fun EditText.atleastOneNumber() : Boolean
+{
+    return validator().atleastOneNumber().check()
+}

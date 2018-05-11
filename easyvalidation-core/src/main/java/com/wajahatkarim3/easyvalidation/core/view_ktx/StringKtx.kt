@@ -54,3 +54,28 @@ fun String.lessThanOrEqual(number: Number) : Boolean
 {
     return validator().lessThanOrEqual(number).check()
 }
+
+fun String.allUperCase() : Boolean
+{
+    return validator().allUpperCase().check()
+}
+
+fun String.allLowerCase() : Boolean
+{
+    return validator().allLowerCase().check()
+}
+
+fun String.atleastOneUpperCase() : Boolean
+{
+    return validator().atleastOneUpperCase().check()
+}
+
+fun String.atleastOneLowerCase() : Boolean
+{
+    return validator().atleastOneLowerCase().check()
+}
+
+fun String.atleastOneNumber() : Boolean
+{
+    return validator().atleastOneNumber().check()
+}

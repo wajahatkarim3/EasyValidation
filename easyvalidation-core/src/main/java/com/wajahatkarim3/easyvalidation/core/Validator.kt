@@ -144,6 +144,36 @@ class Validator(val text: String)
         return this
     }
 
+    fun allLowerCase() : Validator
+    {
+        addRule(AllLowerCaseRule())
+        return this
+    }
+
+    fun allUpperCase() : Validator
+    {
+        addRule(AllUpercCaseRule())
+        return this
+    }
+
+    fun atleastOneUpperCase() : Validator
+    {
+        addRule(AtLeastOneUpercCaseRule())
+        return this
+    }
+
+    fun atleastOneLowerCase() : Validator
+    {
+        addRule(AtLeastOneLowerCaseRule())
+        return this
+    }
+
+    fun atleastOneNumber() : Validator
+    {
+        addRule(AtLeastOneNumberCaseRule())
+        return this
+    }
+
     fun regex(pattern: String) : Validator
     {
         addRule(RegexRule(pattern))
