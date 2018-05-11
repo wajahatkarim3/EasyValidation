@@ -9,7 +9,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  */
 class AtLeastOneLowerCaseRule : BaseRule
 {
-    override fun validate(text: String): Boolean = Validator(text).regex("[A-Z0-9]+").check()
+    override fun validate(text: String): Boolean = Validator(text).regex("^(?=.*[a-z]).+\$").check()
 
     override fun getErrorMessage(): String = "At least one letter should be in lower case."
 }

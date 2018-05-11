@@ -69,8 +69,17 @@ class MainActivity : AppCompatActivity() {
                     //if (edittext.textEqualTo("Hell0") == false)
                     //    edittext.error = "Should be same as Hell0"
 
-                    if (edittext.validUrl() == false)
-                        edittext.error = "Invalid web URL!"
+                    //if (edittext.validUrl() == false)
+                    //    edittext.error = "Invalid web URL!"
+
+                    edittext.validator()
+                            .atleastOneNumber()
+                            .atleastOneSpecialCharacters()
+                            .atleastOneUpperCase()
+                            .addErrorCallback {
+                                edittext.error = it
+                            }
+                            .check()
 
                     //if (edittext.validEmail() == false)
                     //    edittext.error = "Invalid email address!"

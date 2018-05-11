@@ -9,7 +9,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  */
 class AtLeastOneUpercCaseRule : BaseRule
 {
-    override fun validate(text: String): Boolean = Validator(text).regex("[a-z0-9]+").check()
+    override fun validate(text: String): Boolean = Validator(text).regex("^(?=.*[A-Z]).+\$").check()
 
     override fun getErrorMessage(): String = "At least one letter should be in upper case."
 }
