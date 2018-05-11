@@ -63,8 +63,14 @@ class MainActivity : AppCompatActivity() {
                     //        .check()
 
 
-                    if (edittext.greaterThanOrEqual(10))
-                        edittext.error = "Number greater than or equal to 10"
+                    //if (edittext.greaterThanOrEqual(-10) == false)
+                    //    edittext.error = "Number greater than or equal to 10"
+
+                    //if (edittext.textEqualTo("Hell0") == false)
+                    //    edittext.error = "Should be same as Hell0"
+
+                    if (edittext.validUrl() == false)
+                        edittext.error = "Invalid web URL!"
 
                     //if (edittext.validEmail() == false)
                     //    edittext.error = "Invalid email address!"
