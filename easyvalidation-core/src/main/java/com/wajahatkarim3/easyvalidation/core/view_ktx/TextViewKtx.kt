@@ -1,23 +1,23 @@
 package com.wajahatkarim3.easyvalidation.core.view_ktx
 
-import android.widget.EditText
+import android.widget.TextView
 import com.wajahatkarim3.easyvalidation.core.Validator
 import java.math.BigDecimal
 import java.math.BigInteger
 import java.util.regex.Pattern
 import kotlin.math.max
 
-fun EditText.validator() : Validator
+fun TextView.validator() : Validator
 {
     return Validator(text.toString())
 }
 
-fun EditText.nonEmpty() : Boolean
+fun TextView.nonEmpty() : Boolean
 {
     return validator().nonEmpty().check()
 }
 
-fun EditText.nonEmpty(callback: (message: String) -> Unit) : Boolean
+fun TextView.nonEmpty(callback: (message: String) -> Unit) : Boolean
 {
     return validator().nonEmpty()
             .addErrorCallback {
@@ -26,12 +26,12 @@ fun EditText.nonEmpty(callback: (message: String) -> Unit) : Boolean
             .check()
 }
 
-fun EditText.minLength(minLength: Int) : Boolean
+fun TextView.minLength(minLength: Int) : Boolean
 {
     return validator().minLength(minLength).check()
 }
 
-fun EditText.minLength(minLength: Int, callback: (message: String) -> Unit) : Boolean
+fun TextView.minLength(minLength: Int, callback: (message: String) -> Unit) : Boolean
 {
     return validator().minLength(minLength)
             .addErrorCallback {
@@ -39,12 +39,12 @@ fun EditText.minLength(minLength: Int, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun EditText.maxLength(maxLength: Int) : Boolean
+fun TextView.maxLength(maxLength: Int) : Boolean
 {
     return validator().maxLength(maxLength).check()
 }
 
-fun EditText.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Boolean
+fun TextView.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Boolean
 {
     return validator().maxLength(maxLength)
             .addErrorCallback {
@@ -52,12 +52,12 @@ fun EditText.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun EditText.validEmail() : Boolean
+fun TextView.validEmail() : Boolean
 {
     return validator().validEmail().check()
 }
 
-fun EditText.validEmail(callback: (message: String) -> Unit) : Boolean
+fun TextView.validEmail(callback: (message: String) -> Unit) : Boolean
 {
     return validator().validEmail()
             .addErrorCallback {
@@ -65,12 +65,12 @@ fun EditText.validEmail(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.validNumber() : Boolean
+fun TextView.validNumber() : Boolean
 {
     return validator().validNumber().check()
 }
 
-fun EditText.validNumber(callback: (message: String) -> Unit) : Boolean
+fun TextView.validNumber(callback: (message: String) -> Unit) : Boolean
 {
     return validator().validNumber()
             .addErrorCallback {
@@ -78,12 +78,12 @@ fun EditText.validNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.greaterThan(number: Number) : Boolean
+fun TextView.greaterThan(number: Number) : Boolean
 {
     return validator().greaterThan(number).check()
 }
 
-fun EditText.greaterThan(number: Number, callback: (message: String) -> Unit) : Boolean
+fun TextView.greaterThan(number: Number, callback: (message: String) -> Unit) : Boolean
 {
     return validator().greaterThan(number)
             .addErrorCallback {
@@ -91,12 +91,12 @@ fun EditText.greaterThan(number: Number, callback: (message: String) -> Unit) : 
             }.check()
 }
 
-fun EditText.greaterThanOrEqual(number: Number) : Boolean
+fun TextView.greaterThanOrEqual(number: Number) : Boolean
 {
     return validator().greaterThanOrEqual(number).check()
 }
 
-fun EditText.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
+fun TextView.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
 {
     return validator().greaterThanOrEqual(number)
             .addErrorCallback {
@@ -104,12 +104,12 @@ fun EditText.greaterThanOrEqual(number: Number, callback: (message: String) -> U
             }.check()
 }
 
-fun EditText.lessThan(number: Number) : Boolean
+fun TextView.lessThan(number: Number) : Boolean
 {
     return validator().lessThan(number).check()
 }
 
-fun EditText.lessThan(number: Number, callback: (message: String) -> Unit) : Boolean
+fun TextView.lessThan(number: Number, callback: (message: String) -> Unit) : Boolean
 {
     return validator().lessThan(number)
             .addErrorCallback {
@@ -117,12 +117,12 @@ fun EditText.lessThan(number: Number, callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun EditText.lessThanOrEqual(number: Number) : Boolean
+fun TextView.lessThanOrEqual(number: Number) : Boolean
 {
     return validator().lessThanOrEqual(number).check()
 }
 
-fun EditText.lessThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
+fun TextView.lessThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
 {
     return validator().lessThanOrEqual(number)
             .addErrorCallback {
@@ -130,12 +130,12 @@ fun EditText.lessThanOrEqual(number: Number, callback: (message: String) -> Unit
             }.check()
 }
 
-fun EditText.numberEqualTo(number: Number) : Boolean
+fun TextView.numberEqualTo(number: Number) : Boolean
 {
     return validator().numberEqualTo(number).check()
 }
 
-fun EditText.numberEqualTo(number: Number, callback: (message: String) -> Unit) : Boolean
+fun TextView.numberEqualTo(number: Number, callback: (message: String) -> Unit) : Boolean
 {
     return validator().numberEqualTo(number)
             .addErrorCallback {
@@ -143,12 +143,12 @@ fun EditText.numberEqualTo(number: Number, callback: (message: String) -> Unit) 
             }.check()
 }
 
-fun EditText.allUperCase() : Boolean
+fun TextView.allUperCase() : Boolean
 {
     return validator().allUpperCase().check()
 }
 
-fun EditText.allUperCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.allUperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allUpperCase()
             .addErrorCallback {
@@ -156,12 +156,12 @@ fun EditText.allUperCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.allLowerCase() : Boolean
+fun TextView.allLowerCase() : Boolean
 {
     return validator().allLowerCase().check()
 }
 
-fun EditText.allLowerCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.allLowerCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allLowerCase()
             .addErrorCallback {
@@ -169,12 +169,12 @@ fun EditText.allLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.atleastOneUpperCase() : Boolean
+fun TextView.atleastOneUpperCase() : Boolean
 {
     return validator().atleastOneUpperCase().check()
 }
 
-fun EditText.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().atleastOneUpperCase()
             .addErrorCallback {
@@ -182,12 +182,12 @@ fun EditText.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.atleastOneLowerCase() : Boolean
+fun TextView.atleastOneLowerCase() : Boolean
 {
     return validator().atleastOneLowerCase().check()
 }
 
-fun EditText.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().atleastOneLowerCase()
             .addErrorCallback {
@@ -195,12 +195,12 @@ fun EditText.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.atleastOneNumber() : Boolean
+fun TextView.atleastOneNumber() : Boolean
 {
     return validator().atleastOneNumber().check()
 }
 
-fun EditText.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
+fun TextView.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
 {
     return validator().atleastOneNumber()
             .addErrorCallback {
@@ -208,12 +208,12 @@ fun EditText.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.startWithNumber() : Boolean
+fun TextView.startWithNumber() : Boolean
 {
     return validator().startWithNumber().check()
 }
 
-fun EditText.startWithNumber(callback: (message: String) -> Unit) : Boolean
+fun TextView.startWithNumber(callback: (message: String) -> Unit) : Boolean
 {
     return validator().startWithNumber()
             .addErrorCallback {
@@ -221,12 +221,12 @@ fun EditText.startWithNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.startWithNonNumber() : Boolean
+fun TextView.startWithNonNumber() : Boolean
 {
     return validator().startWithNonNumber().check()
 }
 
-fun EditText.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
+fun TextView.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
 {
     return validator().startWithNonNumber()
             .addErrorCallback {
@@ -234,12 +234,12 @@ fun EditText.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.noNumbers() : Boolean
+fun TextView.noNumbers() : Boolean
 {
     return validator().noNumbers().check()
 }
 
-fun EditText.noNumbers(callback: (message: String) -> Unit) : Boolean
+fun TextView.noNumbers(callback: (message: String) -> Unit) : Boolean
 {
     return validator().noNumbers()
             .addErrorCallback {
@@ -247,12 +247,12 @@ fun EditText.noNumbers(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.onlyNumbers() : Boolean
+fun TextView.onlyNumbers() : Boolean
 {
     return validator().onlyNumbers().check()
 }
 
-fun EditText.onlyNumbers(callback: (message: String) -> Unit) : Boolean
+fun TextView.onlyNumbers(callback: (message: String) -> Unit) : Boolean
 {
     return validator().onlyNumbers()
             .addErrorCallback {
@@ -260,12 +260,12 @@ fun EditText.onlyNumbers(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.noSpecialCharacters() : Boolean
+fun TextView.noSpecialCharacters() : Boolean
 {
     return validator().noSpecialCharacters().check()
 }
 
-fun EditText.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
+fun TextView.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
     return validator().noSpecialCharacters()
             .addErrorCallback {
@@ -273,12 +273,12 @@ fun EditText.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.atleastOneSpecialCharacters() : Boolean
+fun TextView.atleastOneSpecialCharacters() : Boolean
 {
     return validator().atleastOneSpecialCharacters().check()
 }
 
-fun EditText.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
+fun TextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
     return validator().atleastOneSpecialCharacters()
             .addErrorCallback {
@@ -286,12 +286,12 @@ fun EditText.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : 
             }.check()
 }
 
-fun EditText.textEqualTo(target: String) : Boolean
+fun TextView.textEqualTo(target: String) : Boolean
 {
     return validator().textEqualTo(target).check()
 }
 
-fun EditText.textEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.textEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().textEqualTo(target)
             .addErrorCallback {
@@ -299,12 +299,12 @@ fun EditText.textEqualTo(target: String, callback: (message: String) -> Unit) : 
             }.check()
 }
 
-fun EditText.textNotEqualTo(target: String) : Boolean
+fun TextView.textNotEqualTo(target: String) : Boolean
 {
     return validator().textNotEqualTo(target).check()
 }
 
-fun EditText.textNotEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.textNotEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().textNotEqualTo(target)
             .addErrorCallback {
@@ -312,12 +312,12 @@ fun EditText.textNotEqualTo(target: String, callback: (message: String) -> Unit)
             }.check()
 }
 
-fun EditText.startsWith(target: String) : Boolean
+fun TextView.startsWith(target: String) : Boolean
 {
     return validator().startsWith(target).check()
 }
 
-fun EditText.startsWith(target: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.startsWith(target: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().startsWith(target)
             .addErrorCallback {
@@ -325,12 +325,12 @@ fun EditText.startsWith(target: String, callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun EditText.endssWith(target: String) : Boolean
+fun TextView.endssWith(target: String) : Boolean
 {
     return validator().endsWith(target).check()
 }
 
-fun EditText.endssWith(target: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.endssWith(target: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().endsWith(target)
             .addErrorCallback {
@@ -338,12 +338,12 @@ fun EditText.endssWith(target: String, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun EditText.contains(target: String) : Boolean
+fun TextView.contains(target: String) : Boolean
 {
     return validator().contains(target).check()
 }
 
-fun EditText.contains(target: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.contains(target: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().contains(target)
             .addErrorCallback {
@@ -351,12 +351,12 @@ fun EditText.contains(target: String, callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun EditText.notContains(target: String) : Boolean
+fun TextView.notContains(target: String) : Boolean
 {
     return validator().notContains(target).check()
 }
 
-fun EditText.notContains(target: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.notContains(target: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().notContains(target)
             .addErrorCallback {
@@ -364,12 +364,12 @@ fun EditText.notContains(target: String, callback: (message: String) -> Unit) : 
             }.check()
 }
 
-fun EditText.creditCardNumber() : Boolean
+fun TextView.creditCardNumber() : Boolean
 {
     return validator().creditCardNumber().check()
 }
 
-fun EditText.creditCardNumber(callback: (message: String) -> Unit) : Boolean
+fun TextView.creditCardNumber(callback: (message: String) -> Unit) : Boolean
 {
     return validator().creditCardNumber()
             .addErrorCallback {
@@ -377,12 +377,12 @@ fun EditText.creditCardNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.creditCardNumberWithSpaces() : Boolean
+fun TextView.creditCardNumberWithSpaces() : Boolean
 {
     return validator().creditCardNumberWithSpaces().check()
 }
 
-fun EditText.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Boolean
+fun TextView.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Boolean
 {
     return validator().creditCardNumberWithSpaces()
             .addErrorCallback {
@@ -390,12 +390,12 @@ fun EditText.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun EditText.creditCardNumberWithDashes() : Boolean
+fun TextView.creditCardNumberWithDashes() : Boolean
 {
     return validator().creditCardNumberWithDashes().check()
 }
 
-fun EditText.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Boolean
+fun TextView.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Boolean
 {
     return validator().creditCardNumberWithDashes()
             .addErrorCallback {
@@ -403,12 +403,12 @@ fun EditText.creditCardNumberWithDashes(callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun EditText.validUrl() : Boolean
+fun TextView.validUrl() : Boolean
 {
     return validator().validUrl().check()
 }
 
-fun EditText.validUrl(callback: (message: String) -> Unit) : Boolean
+fun TextView.validUrl(callback: (message: String) -> Unit) : Boolean
 {
     return validator().validUrl()
             .addErrorCallback {
@@ -416,12 +416,12 @@ fun EditText.validUrl(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun EditText.regex(pattern: String) : Boolean
+fun TextView.regex(pattern: String) : Boolean
 {
     return validator().regex(pattern).check()
 }
 
-fun EditText.regex(pattern: String, callback: (message: String) -> Unit) : Boolean
+fun TextView.regex(pattern: String, callback: (message: String) -> Unit) : Boolean
 {
     return validator().regex(pattern)
             .addErrorCallback {

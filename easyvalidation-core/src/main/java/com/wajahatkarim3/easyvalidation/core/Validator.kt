@@ -42,12 +42,6 @@ class Validator(val text: String)
     var rulesList = ArrayList<BaseRule>()
 
     /*
-     * User settable limits for the numbers of characters that the string can contain
-     */
-    private var MINIMUM_LENGTH = 0
-    private var MAXIMUM_LENGTH = Int.MAX_VALUE
-
-    /*
      * Performs the validation check and returns true or false.
      * Also invokes success and error callbacks if non null.
      */
