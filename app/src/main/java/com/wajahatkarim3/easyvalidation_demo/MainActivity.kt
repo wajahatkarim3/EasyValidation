@@ -29,8 +29,9 @@ class MainActivity : AppCompatActivity() {
             //        .check()
 
             // Extension Way
-            if (edittext.nonEmpty() == false)
+            edittext.nonEmpty() {
                edittext.error = "Cannot be empty! - Check"
+            }
         }
 
         findViewById<Button>(R.id.btnMinLength)
@@ -48,8 +49,12 @@ class MainActivity : AppCompatActivity() {
 
 
                     // Extension way
-                    if (edittext.minLength(3) == false)
+                    //if (edittext.minLength(3) == false)
+                    //    edittext.error = "Should be greater than 3"
+
+                    edittext.minLength(3) {
                         edittext.error = "Should be greater than 3"
+                    }
                 }
 
         findViewById<Button>(R.id.btnEmail)
