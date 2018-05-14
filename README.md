@@ -47,6 +47,24 @@ There's another smaller and easier way. This uses kotlin extensions. This librar
 
 ```kotlin
 var edittext = findViewById<EditText>(R.id.myeditid)
+edittext.nonEmpty() {
+    edittext.error = it
+    return
+}
+edittext.minLength(3) {
+    edittext.error = it
+    return
+}
+edittext.maxLength(10) {
+    edittext.error = it
+    return
+}
+```
+
+Or you can do all at once like:
+
+```kotlin
+
 if (edittext.nonEmpty() && edittext.minLength(3) && edittext.maxLength(10))
 {
     // The EditText satisfies all checks. So you are free to use the EditText text.
