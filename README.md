@@ -1,6 +1,27 @@
 # EasyValidation
 A text and input validation library in Kotlin for Android
 
+## Installation
+Add this in project's ```build.gradle``` file:
+
+```groovy
+// ...
+allprojects {
+    repositories {
+        // ....
+        // ....
+        maven { url "https://dl.bintray.com/wajahatkarim3/EasyValidation" }
+    }
+}
+// ...
+```
+
+And then add this in app's ```build.gradle``` file:
+
+```groovy
+   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:0.0.1"
+```
+
 ## How it works
 
 There are two ways to validate ```EditText```.
