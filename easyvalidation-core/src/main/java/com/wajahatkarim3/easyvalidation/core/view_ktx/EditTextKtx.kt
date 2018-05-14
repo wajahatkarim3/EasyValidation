@@ -28,7 +28,9 @@ fun EditText.nonEmpty(callback: (message: String) -> Unit) : Boolean
 
 fun EditText.minLength(minLength: Int) : Boolean
 {
-    return validator().minLength(minLength).check()
+    return validator()
+            .minLength(minLength)
+            .check()
 }
 
 fun EditText.minLength(minLength: Int, callback: (message: String) -> Unit) : Boolean

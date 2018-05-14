@@ -7,6 +7,8 @@ object Versions {
 object Deps {
     // Gradle
     val gradle_plugin = "com.android.tools.build:gradle:${Versions.gradle}"
+    val gradle_bintray = "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.4"
+    val gradle_maven = "com.github.dcendents:android-maven-gradle-plugin:1.4.1"
 
     // Kotlin
     val kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
