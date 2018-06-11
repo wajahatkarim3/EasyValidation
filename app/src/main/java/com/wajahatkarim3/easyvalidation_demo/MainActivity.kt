@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.wajahatkarim3.easyvalidation.core.collection_ktx.nonEmptyList
 import com.wajahatkarim3.easyvalidation.core.rules.GreaterThanRule
 import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
@@ -55,6 +57,13 @@ class MainActivity : AppCompatActivity() {
                     edittext.minLength(3) {
                         edittext.error = "Should be greater than 3"
                     }
+
+                    //Toast.makeText(this, "Testing Toast", Toast.LENGTH_LONG).show()
+
+                    nonEmptyList(findViewById<EditText>(R.id.editText), findViewById<EditText>(R.id.editText2), findViewById<EditText>(R.id.editText3)) { view, message ->
+                        view.error = message
+                    }
+
                 }
 
         findViewById<Button>(R.id.btnEmail)
