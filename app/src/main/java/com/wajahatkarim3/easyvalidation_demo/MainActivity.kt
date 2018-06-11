@@ -54,9 +54,9 @@ class MainActivity : AppCompatActivity() {
                     //if (edittext.minLength(3) == false)
                     //    edittext.error = "Should be greater than 3"
 
-                    //edittext.minLength(3) {
-                    //    edittext.error = "Should be greater than 3"
-                    //}
+                    edittext.minLength(3) {
+                        edittext.error = "Should be greater than 3"
+                    }
 
                     //Toast.makeText(this, "Testing Toast", Toast.LENGTH_LONG).show()
 
