@@ -19,7 +19,7 @@ allprojects {
 And then add this in app's ```build.gradle``` file:
 
 ```groovy
-   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:0.0.1"
+   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.0"
 ```
 
 ## How it works
