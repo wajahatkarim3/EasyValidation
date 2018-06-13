@@ -90,3 +90,6 @@ You can also check multiple views at same time using collection extensions. For 
         view.error = message
     }
 ```
+
+
+You can apply all the built-in rules just by adding ```List``` suffix in the rule name. For example, ```nonEmpty``` becomes ```nonEmptyList```, the ```validEmail``` becomes ```validEmailList``` and so on. 
