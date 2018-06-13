@@ -1,6 +1,8 @@
 # EasyValidation
 A text and input validation library in Kotlin for Android
 
+[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion)
+
 ## Installation
 Add this in project's ```build.gradle``` file:
 
