@@ -16,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/wajahatkarim3/EasyValidation'
     gitUrl = 'https://github.com/wajahatkarim3/EasyValidation.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '1.0.0'
 
     developerId = 'wajahatkarim3'
     developerName = 'Wajahat Karim'
