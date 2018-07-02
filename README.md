@@ -25,7 +25,7 @@ And then add this in app's ```build.gradle``` file:
 ```
 
 ## Documentation
-Full documentation is available at Gitbook
+Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
 ## How it works
 
