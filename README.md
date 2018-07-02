@@ -25,6 +25,7 @@ And then add this in app's ```build.gradle``` file:
 ```
 
 ## Documentation
+Full documentation is available at Gitbook
 
 ## How it works
 
