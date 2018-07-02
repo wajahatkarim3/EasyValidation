@@ -24,6 +24,8 @@ And then add this in app's ```build.gradle``` file:
    implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.0"
 ```
 
+## Documentation
+
 ## How it works
 
 There are two ways to validate ```EditText```.
