@@ -24,7 +24,7 @@ And then add this in app's ```build.gradle``` file:
    implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.0"
 ```
 
-## Documentation
+## Documentation (Work in Progress)
 Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
 ## How it works
