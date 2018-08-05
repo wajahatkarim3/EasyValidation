@@ -83,6 +83,12 @@ class Validator(val text: String)
         return this
     }
 
+    fun addSuccessCallback(callback: () -> Unit) : Validator
+    {
+        successCallback = callback
+        return this
+    }
+
     // Rules
     fun nonEmpty() : Validator
     {
