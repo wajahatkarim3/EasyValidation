@@ -10,7 +10,7 @@ Add this in app's ```build.gradle``` file:
    implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.0"
 ```
 
-## Documentation (Work in Progress)
+## Documentation
 Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
 ## How it works
