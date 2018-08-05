@@ -1,26 +1,17 @@
 # EasyValidation
 A text and input validation library in Kotlin for Android
 
+[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion)
+
 ## Installation
-Add this in project's ```build.gradle``` file:
+Add this in app's ```build.gradle``` file:
 
 ```groovy
-// ...
-allprojects {
-    repositories {
-        // ....
-        // ....
-        maven { url "https://dl.bintray.com/wajahatkarim3/EasyValidation" }
-    }
-}
-// ...
+   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.0"
 ```
 
-And then add this in app's ```build.gradle``` file:
-
-```groovy
-   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:0.0.1"
-```
+## Documentation
+Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
 ## How it works
 
@@ -75,3 +66,21 @@ else
     // Show any error or toast or snack or dialog etc. here
 }
 ```
+
+### Collection Extensions
+You can also check multiple views at same time using collection extensions. For example,
+
+```kotlin
+    // Works with views like EditText, TextView, Spinner etc.
+    nonEmptyList(txtUsername, txtEmail, txtPassword, txtPhoneNumber) { view, message ->
+        view.error = message
+    }
+    
+    // Also works with direct view IDs for only in Activity or Fragment
+    minLengthList(3, R.id.txtUsername, R.id.txtPassword, R.id.txtPhoneNumber) { view, message ->
+        view.error = message
+    }
+```
+
+
+You can apply all the built-in rules just by adding ```List``` suffix in the rule name. For example, ```nonEmpty``` becomes ```nonEmptyList```, the ```validEmail``` becomes ```validEmailList``` and so on. 
