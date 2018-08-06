@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/wajahatkarim3/EasyValidation/master/Art/easyvalidlogo1.jpg)
+![](https://raw.githubusercontent.com/wajahatkarim3/EasyValidation/master/Art/easyvalidlogo1.jpg) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 # EasyValidation
 A text and input validation library in Kotlin for Android
