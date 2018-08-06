@@ -5,14 +5,17 @@ A text and input validation library in Kotlin for Android
 
 [ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
-## Installation
+## ✔️ Changelog
+Changes exist in the [releases](https://github.com/wajahatkarim3/MediumClap-Android/releases) tab.
+
+## 💻 Installation
 Add this in app's ```build.gradle``` file:
 
 ```groovy
    implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.1"
 ```
 
-## Documentation
+## 📄 Documentation
 Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
 ## How it works
