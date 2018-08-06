@@ -31,3 +31,35 @@ For example, you can validate any email `String` like this:
        Toast.makeText(contex, it, Toast.LENGTH_SHORT).show()
    }
 ```
+These extension methods are also available for `EditText`, `TextView`, `AutoCompleteTextView`, `TextInputLayout`, and `Spinner`.
+```kotlin
+   var myEditText = findViewById<EditText>(R.id.myEditText)
+   var isValid = myEditText.nonEmpty()        // Checks if edit text is empty or not
+
+   // Or with error callback method like this
+   myEditText.nonEmpty() {
+       // This method will be called when myEditText is empty.
+       myEditText.error = it
+   }
+```
+There are around 30+ built-in rules in the core module library. You can check all these in [Rules page](https://wajahatkarim.gitbook.io/easyvalidation/usage/built-in-rules).
+EasyValidation also supports multiple validation checks at same time using [Validator class](https://wajahatkarim.gitbook.io/easyvalidation/usage/untitled) like this:
+```kotlin
+// This example will check that whether user entered password has
+// atleast one number, one spcial character, and one upper case.
+var txtPassword = findViewById<EditText>(R.id.txtPassword)
+txtPassword.validator()
+     .nonEmpty()
+     .atleastOneNumber()
+     .atleastOneSpecialCharacters()
+     .atleastOneUpperCase()
+     .addErrorCallback { 
+          txtPassword.error = it
+          // it will contain the right message. 
+          // For example, if edit text is empty, 
+          // then 'it' will show "Can't be Empty" message
+     }
+     .check()
+```
+
+For more advanced usage, checkout the [full documentation at GitBook page](https://wajahatkarim.gitbook.io/easyvalidation/).
