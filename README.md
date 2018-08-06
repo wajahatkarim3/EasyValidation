@@ -1,9 +1,9 @@
-![](https://raw.githubusercontent.com/wajahatkarim3/EasyValidation/master/Art/easyvalidlogo1.jpg) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
+![](https://raw.githubusercontent.com/wajahatkarim3/EasyValidation/master/Art/easyvalidlogo1.jpg)
 
 # EasyValidation
 A text and input validation library in Kotlin for Android
 
-[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 ## Installation
 Add this in app's ```build.gradle``` file:
