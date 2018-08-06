@@ -18,6 +18,15 @@ Add this in app's ```build.gradle``` file:
 ## 📄 Documentation
 Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
+## ⭐️ Features
+* The Validator way validation support. - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/untitled)
+* 30+ built-in validation rules like empty, email, credit cards, etc. - [Rules List](https://wajahatkarim.gitbook.io/easyvalidation/usage/built-in-rules)
+* Extension methods for `String`, `EditText`, `TextView`, `AutoCompleteTextView`, `TextInputLayout`, and `Spinner`. - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/validation-using-extension-methods)
+* Multiple Validations and Checks - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/multiple-validation-checks)
+* Collection Extension Methods for validations on multiple texts and views - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/collection-extensions)
+* Create your own custom rules - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/create-custom-rules)
+
+
 ## ❓ Quick Usage
 
 For example, you can validate any email `String` like this:
@@ -31,7 +40,7 @@ For example, you can validate any email `String` like this:
        Toast.makeText(contex, it, Toast.LENGTH_SHORT).show()
    }
 ```
-These extension methods are also available for `EditText`, `TextView`, `AutoCompleteTextView`, `TextInputLayout`, and `Spinner`.
+These extension methods are also available for `String`, `EditText`, `TextView`, `AutoCompleteTextView`, `TextInputLayout`, and `Spinner`.
 ```kotlin
    var myEditText = findViewById<EditText>(R.id.myEditText)
    var isValid = myEditText.nonEmpty()        // Checks if edit text is empty or not
