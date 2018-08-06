@@ -7,7 +7,7 @@ A text and input validation library in Kotlin for Android
 Add this in app's ```build.gradle``` file:
 
 ```groovy
-   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.0"
+   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.1"
 ```
 
 ## Documentation
