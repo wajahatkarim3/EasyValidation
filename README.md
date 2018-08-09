@@ -3,7 +3,7 @@
 # EasyValidation
 A text and input validation library in Kotlin for Android
 
-[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
+[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]() [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/wajahatkarim3)
 
 ## ✔️ Changelog
 Changes exist in the [releases](https://github.com/wajahatkarim3/MediumClap-Android/releases) tab.
