@@ -8,41 +8,41 @@
 <br/>
 <div align="center">
     <!-- Bintray -->
-    <a href="https://bintray.com/nisrulz/maven/validatetor/_latestVersion">
-        <img src="https://api.bintray.com/packages/nisrulz/maven/validatetor/images/download.svg"/>
+    <a href="https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion">
+        <img src="https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg"/>
     </a>
     <!-- API -->
     <a href="https://android-arsenal.com/api?level=14">
         <img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat"/>
     </a>
-    <!-- GitHub stars -->
-    <a href="https://github.com/nisrulz/validatetor">
+    <!-- GitHub stars 
+    <a href="https://github.com/wajahatkarim3/EasyValidation">
         <img src="https://img.shields.io/github/stars/nisrulz/validatetor.svg?style=social&label=Star"/>
-    </a>
-    <!-- GitHub forks -->
+    </a> -->
+    <!-- GitHub forks 
     <a href="https://github.com/nisrulz/validatetor/fork">
         <img src="https://img.shields.io/github/forks/nisrulz/validatetor.svg?style=social&label=Fork"/>
-    </a>
-    <!-- GitHub watchers -->
+    </a> -->
+    <!-- GitHub watchers 
     <a href="https://github.com/nisrulz/validatetor">
         <img src="https://img.shields.io/github/watchers/nisrulz/validatetor.svg?style=social&label=Watch"/>
-    </a>
+    </a> -->
     <!-- Say Thanks! -->
-    <a href="https://saythanks.io/to/nisrulz">
+    <a href="https://saythanks.io/to/wajahatkarim3">
         <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
     </a>
-    <a href="https://www.paypal.me/nisrulz/5usd">
+    <a href="https://www.paypal.me/WajahatKarim/5">
         <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
     </a>
     <br/>
-     <!-- GitHub followers -->
+     <!-- GitHub followers 
     <a href="https://github.com/nisrulz/validatetor">
         <img src="https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow%20@nisrulz"/>
-    </a>
-    <!-- Twitter Follow -->
+    </a> -->
+    <!-- Twitter Follow 
     <a href="https://twitter.com/nisrulz">
         <img src="https://img.shields.io/twitter/follow/nisrulz.svg?style=social"/>
-    </a>
+    </a> -->
 </div>
 
 <div align="center">
