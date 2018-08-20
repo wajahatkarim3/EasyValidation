@@ -19,6 +19,9 @@
     <a href="https://android-arsenal.com/api?level=14">
         <img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat"/>
     </a>
+    <a href="">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+    </a>
     <!-- GitHub stars 
     <a href="https://github.com/wajahatkarim3/EasyValidation">
         <img src="https://img.shields.io/github/stars/nisrulz/validatetor.svg?style=social&label=Star"/>
