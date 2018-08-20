@@ -7,6 +7,10 @@
 
 <br/>
 <div align="center">
+    <!-- AppCenter -->
+    <a href="https://appcenter.ms">
+        <img src="https://build.appcenter.ms/v0.1/apps/ffd5a8a1-b026-4466-9480-787e049f2f7a/branches/develop/badge"/>
+    </a>    
     <!-- Bintray -->
     <a href="https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion">
         <img src="https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg"/>
@@ -47,8 +51,8 @@
 
 <div align="center">
   <sub>Built with ❤︎ by
-  <a href="https://twitter.com/nisrulz">Nishant Srivastava</a> and
-  <a href="https://github.com/nisrulz/validatetor/graphs/contributors">
+  <a href="https://twitter.com/WajahatKarim">Wajahat Karim</a> and
+  <a href="https://github.com/wajahatkarim3/EasyValidation/graphs/contributors">
     contributors
   </a>
 </div>
