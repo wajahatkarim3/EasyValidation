@@ -15,6 +15,10 @@
     <a href="https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion">
         <img src="https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg"/>
     </a>
+    <!-- Arsenal -->
+    <a href="https://android-arsenal.com/details/1/7109">
+        <img src="https://img.shields.io/badge/Android%20Arsenal-Easy%20Validation-brightgreen.svg?style=flat"/>
+    </a>    
     <!-- API -->
     <a href="https://android-arsenal.com/api?level=14">
         <img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat"/>
