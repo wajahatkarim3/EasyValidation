@@ -7,7 +7,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class ValidNumberRule : BaseRule {
+class ValidNumberRule(var errorMsg: String = "Invalid Number!") : BaseRule {
 
     override fun validate(text: String): Boolean
     {
@@ -25,5 +25,9 @@ class ValidNumberRule : BaseRule {
         }
     }
 
-    override fun getErrorMessage(): String = "Invalid Number!"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

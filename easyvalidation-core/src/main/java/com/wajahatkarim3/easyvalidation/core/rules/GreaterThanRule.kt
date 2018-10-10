@@ -1,8 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validNumber
-import java.math.BigDecimal
-import java.math.BigInteger
 import java.text.NumberFormat
 
 /**
@@ -10,14 +8,7 @@ import java.text.NumberFormat
  *
  * @author Wajahat Karim
  */
-class GreaterThanRule : BaseRule {
-
-    var target: Number = 0
-
-    constructor(targetNum: Number)
-    {
-        target = targetNum
-    }
+class GreaterThanRule(var target: Number = 0, var errorMsg: String = "Should be greater than $target") : BaseRule {
 
     override fun validate(text: String): Boolean {
 
@@ -47,6 +38,9 @@ class GreaterThanRule : BaseRule {
         }
     }
 
-    override fun getErrorMessage(): String = "Should be greater than $target"
+    override fun getErrorMessage(): String = errorMsg
 
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

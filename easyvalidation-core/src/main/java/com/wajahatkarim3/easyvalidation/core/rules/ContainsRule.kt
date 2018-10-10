@@ -1,16 +1,11 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
-import com.wajahatkarim3.easyvalidation.core.view_ktx.validNumber
-import java.math.BigDecimal
-import java.math.BigInteger
-import java.text.NumberFormat
-
 /**
  * Returns true if the text contains the given text
  *
  * @author Wajahat Karim
  */
-class ContainsRule(val target: String) : BaseRule {
+class ContainsRule(val target: String, var errorMsg: String = "Should contain $target" ) : BaseRule {
 
     override fun validate(text: String): Boolean {
 
@@ -20,6 +15,10 @@ class ContainsRule(val target: String) : BaseRule {
         return text.contains(target)
     }
 
-    override fun getErrorMessage(): String = "Should contain $target"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 
 }

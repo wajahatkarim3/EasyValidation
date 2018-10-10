@@ -7,7 +7,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class NoSpecialCharacterRule : BaseRule
+class NoSpecialCharacterRule(var errorMsg: String = "Should not contain any special characters") : BaseRule
 {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())
@@ -16,5 +16,9 @@ class NoSpecialCharacterRule : BaseRule
         return Validator(text).regex("[A-Za-z0-9]+").check()
     }
 
-    override fun getErrorMessage(): String = "Should not contain any special characters"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

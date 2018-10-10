@@ -7,7 +7,7 @@ import android.util.Patterns
  *
  * @author Wajahat Karim
  */
-class ValidUrlRule : BaseRule
+class ValidUrlRule(var errorMsg: String = "Invalid web URL") : BaseRule
 {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())
@@ -16,5 +16,9 @@ class ValidUrlRule : BaseRule
         return Patterns.WEB_URL.matcher(text).matches()
     }
 
-    override fun getErrorMessage(): String = "Invalid web URL"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

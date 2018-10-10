@@ -5,9 +5,13 @@ package com.wajahatkarim3.easyvalidation.core.rules
  *
  * @author Wajahat Karim
  */
-class NonEmptyRule : BaseRule
+class NonEmptyRule(var errorMsg: String = "Can't be empty!") : BaseRule
 {
     override fun validate(text: String): Boolean = !text.isEmpty()
 
-    override fun getErrorMessage(): String = "Can't be empty!"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

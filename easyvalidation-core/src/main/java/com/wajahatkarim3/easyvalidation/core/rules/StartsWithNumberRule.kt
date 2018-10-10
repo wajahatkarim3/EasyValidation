@@ -7,7 +7,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class StartsWithNumberRule : BaseRule
+class StartsWithNumberRule(var errorMsg: String = "Should start with any number.") : BaseRule
 {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())
@@ -16,5 +16,9 @@ class StartsWithNumberRule : BaseRule
         return Validator(text).regex("^(\\d+.*|-\\d+.*)").check()
     }
 
-    override fun getErrorMessage(): String = "Should start with any number."
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

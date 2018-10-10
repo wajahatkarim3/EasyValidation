@@ -1,6 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
-import java.util.ArrayList
+import java.util.*
 
 
 
@@ -10,7 +10,7 @@ import java.util.ArrayList
  *
  * @author Wajahat Karim
  */
-class CreditCardWithSpacesRule : BaseRule {
+class CreditCardWithSpacesRule(var errorMsg: String = "Invalid Credit Card Number!") : BaseRule {
 
     override fun validate(text: String): Boolean {
         val listOfPattern = ArrayList<String>()
@@ -38,5 +38,9 @@ class CreditCardWithSpacesRule : BaseRule {
         return false
     }
 
-    override fun getErrorMessage(): String = "Invalid Credit Card Number!"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

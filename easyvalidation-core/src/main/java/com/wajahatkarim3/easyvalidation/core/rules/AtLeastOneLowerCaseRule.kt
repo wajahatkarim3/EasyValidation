@@ -1,6 +1,5 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
-import android.support.annotation.StringRes
 import com.wajahatkarim3.easyvalidation.core.Validator
 
 /**
@@ -8,7 +7,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class AtLeastOneLowerCaseRule(@StringRes var errorMsg: String = "At least one letter should be in lower case.") : BaseRule
+class AtLeastOneLowerCaseRule(var errorMsg: String = "At least one letter should be in lower case.") : BaseRule
 {
     override fun validate(text: String): Boolean = Validator(text).regex("^(?=.*[a-z]).+\$").check()
 
