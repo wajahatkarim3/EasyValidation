@@ -1,86 +1,184 @@
-# EasyValidation
-A text and input validation library in Kotlin for Android
+![](https://raw.githubusercontent.com/wajahatkarim3/EasyValidation/master/Art/easyvalidlogo.jpg)
 
-[ ![Download](https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg) ](https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion)
 
-## Installation
+<h1 align="center"><a href="https://twitter.com/intent/tweet?text=Quickly%20and%20easily%20validate%20your%20text%20and%20input%20in%20Android%20apps%20with%20this%20amazing%20library%20EasyValidation%20written%20in%20entirely%20in%20kotlin.:&url=https%3A%2F%2Fgithub.com%2Fwajahatkarim3%2FEasyValidation">
+        <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"/>
+    </a></h1>
+
+<br/>
+<div align="center">
+    <!-- AppCenter -->
+    <a href="https://appcenter.ms">
+        <img src="https://build.appcenter.ms/v0.1/apps/ffd5a8a1-b026-4466-9480-787e049f2f7a/branches/develop/badge"/>
+    </a>    
+    <!-- Bintray -->
+    <a href="https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion">
+        <img src="https://api.bintray.com/packages/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/images/download.svg"/>
+    </a>
+    <!-- Arsenal -->
+    <a href="https://android-arsenal.com/details/1/7109">
+        <img src="https://img.shields.io/badge/Android%20Arsenal-Easy%20Validation-brightgreen.svg?style=flat"/>
+    </a>    
+    <!-- API -->
+    <a href="https://android-arsenal.com/api?level=14">
+        <img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat"/>
+    </a>
+    <a href="">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+    </a>
+    <!-- GitHub stars 
+    <a href="https://github.com/wajahatkarim3/EasyValidation">
+        <img src="https://img.shields.io/github/stars/nisrulz/validatetor.svg?style=social&label=Star"/>
+    </a> -->
+    <!-- GitHub forks 
+    <a href="https://github.com/nisrulz/validatetor/fork">
+        <img src="https://img.shields.io/github/forks/nisrulz/validatetor.svg?style=social&label=Fork"/>
+    </a> -->
+    <!-- GitHub watchers 
+    <a href="https://github.com/nisrulz/validatetor">
+        <img src="https://img.shields.io/github/watchers/nisrulz/validatetor.svg?style=social&label=Watch"/>
+    </a> -->
+    <!-- Say Thanks! -->
+    <a href="https://saythanks.io/to/wajahatkarim3">
+        <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
+    </a>
+    <a href="https://www.paypal.me/WajahatKarim/5">
+        <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+    </a>
+    <br/>
+     <!-- GitHub followers 
+    <a href="https://github.com/nisrulz/validatetor">
+        <img src="https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow%20@nisrulz"/>
+    </a> -->
+    <!-- Twitter Follow 
+    <a href="https://twitter.com/nisrulz">
+        <img src="https://img.shields.io/twitter/follow/nisrulz.svg?style=social"/>
+    </a> -->
+</div>
+
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://twitter.com/WajahatKarim">Wajahat Karim</a> and
+  <a href="https://github.com/wajahatkarim3/EasyValidation/graphs/contributors">
+    contributors
+  </a>
+</div>
+<br/>
+<br/>
+
+## ✔️ Changelog
+Changes exist in the [releases](https://github.com/wajahatkarim3/MediumClap-Android/releases) tab.
+
+## 💻 Installation
 Add this in app's ```build.gradle``` file:
 
 ```groovy
    implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.1"
 ```
 
-## Documentation
+## 📄 Documentation
 Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
-## How it works
+## ⭐️ Features
+* The Validator way validation support. - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/untitled)
+* 30+ built-in validation rules like empty, email, credit cards, etc. - [Rules List](https://wajahatkarim.gitbook.io/easyvalidation/usage/built-in-rules)
+* Extension methods for `String`, `EditText`, `TextView`, `AutoCompleteTextView`, `TextInputLayout`, and `Spinner`. - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/validation-using-extension-methods)
+* Multiple Validations and Checks - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/multiple-validation-checks)
+* Collection Extension Methods for validations on multiple texts and views - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/collection-extensions)
+* Create your own custom rules - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/create-custom-rules)
 
-There are two ways to validate ```EditText```.
 
-### Validator Way
-The ```Validator``` way is a lot more customizable and allows you add as many rules as you like. Some rules are already developed in the library. Here is an example, which tells that ```EditText``` cannot be empty and will have number of characters between 3 and 10. 
+## ❓ Quick Usage
 
+For example, you can validate any email `String` like this:
 ```kotlin
+   var myEmailStr = "john.doe@gmail.com"
+   var isValid = myEmailStr.validEmail()  // isValid will be true or false
+   
+   // Or you can also validate with an error callback method
+   myEmailStr.validEmail() {
+       // This method will be called when myEmailStr is not a valid email.
+       Toast.makeText(contex, it, Toast.LENGTH_SHORT).show()
+   }
+```
+These extension methods are also available for `String`, `EditText`, `TextView`, `AutoCompleteTextView`, `TextInputLayout`, and `Spinner`.
+```kotlin
+   var myEditText = findViewById<EditText>(R.id.myEditText)
+   var isValid = myEditText.nonEmpty()        // Checks if edit text is empty or not
 
-var edittext = findViewById<EditText>(R.id.myeditid)
-edittext.validator()
-        .nonEmpty()       // Check if the EditText is not empty
-        .minLength(3)     // Check if the EditText length is greater than or equal to 3
-        .maxLength(10)    // Check if the EditText length is less than or equal to 10
-        .addErrorCallback { message ->
-              edittext.error = message        // Show any error or toast or snack or dialog etc. here
-        }
-        .check()          // Performs validation check
+   // Or with error callback method like this
+   myEditText.nonEmpty() {
+       // This method will be called when myEditText is empty.
+       myEditText.error = it
+   }
+```
+There are around 30+ built-in rules in the core module library. You can check all these in [Rules page](https://wajahatkarim.gitbook.io/easyvalidation/usage/built-in-rules).
+EasyValidation also supports multiple validation checks at same time using [Validator class](https://wajahatkarim.gitbook.io/easyvalidation/usage/untitled) like this:
+```kotlin
+// This example will check that whether user entered password has
+// atleast one number, one spcial character, and one upper case.
+var txtPassword = findViewById<EditText>(R.id.txtPassword)
+txtPassword.validator()
+     .nonEmpty()
+     .atleastOneNumber()
+     .atleastOneSpecialCharacters()
+     .atleastOneUpperCase()
+     .addErrorCallback { 
+          txtPassword.error = it
+          // it will contain the right message. 
+          // For example, if edit text is empty, 
+          // then 'it' will show "Can't be Empty" message
+     }
+     .check()
 ```
 
-### Extension Way
-There's another smaller and easier way. This uses kotlin extensions. This library comes with already built-in rules' extensions. For the above same example, validation will be like this:
+For more advanced usage, checkout the [full documentation at GitBook page](https://wajahatkarim.gitbook.io/easyvalidation/).
 
-```kotlin
-var edittext = findViewById<EditText>(R.id.myeditid)
-edittext.nonEmpty() {
-    edittext.error = it
-    return
-}
-edittext.minLength(3) {
-    edittext.error = it
-    return
-}
-edittext.maxLength(10) {
-    edittext.error = it
-    return
-}
+## 💰 Donations
+
+This project needs you! If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, feel free to donate. Your donation is highly appreciated (and I love food, coffee and beer). Thank you!
+
+**PayPal**
+
+* **[Donate $5](https://www.paypal.me/WajahatKarim/5)**: Thank's for creating this project, here's a tea (or some juice) for you!
+* **[Donate $10](https://www.paypal.me/WajahatKarim/10)**: Wow, I am stunned. Let me take you to the movies!
+* **[Donate $15](https://www.paypal.me/WajahatKarim/15)**: I really appreciate your work, let's grab some lunch!
+* **[Donate $25](https://www.paypal.me/WajahatKarim/25)**: That's some awesome stuff you did right there, dinner is on me!
+* **[Donate $50](https://www.paypal.me/WajahatKarim/50)**: I really really want to support this project, great job!
+* **[Donate $100](https://www.paypal.me/WajahatKarim/100)**: You are the man! This project saved me hours (if not days) of struggle and hard work, simply awesome!
+* **[Donate $2799](https://www.paypal.me/WajahatKarim/2799)**: Go buddy, buy Macbook Pro for yourself!
+
+Of course, you can also choose what you want to donate, all donations are awesome!
+
+## 👨 Developed By
+
 ```
-
-Or you can do all at once like:
-
-```kotlin
-
-if (edittext.nonEmpty() && edittext.minLength(3) && edittext.maxLength(10))
-{
-    // The EditText satisfies all checks. So you are free to use the EditText text.
-}
-else 
-{
-    // Any one condition from empty or minimum length or maximum length has returned false. 
-    // Show any error or toast or snack or dialog etc. here
-}
+Wajahat Karim
 ```
+- Website (http://wajahatkarim.com)
+- Twitter (http://twitter.com/wajahatkarim)
+- Medium (http://www.medium.com/@wajahatkarim3)
+- LinkedIn (http://www.linkedin.com/in/wajahatkarim)
 
-### Collection Extensions
-You can also check multiple views at same time using collection extensions. For example,
+# 👍 How to Contribute
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
 
-```kotlin
-    // Works with views like EditText, TextView, Spinner etc.
-    nonEmptyList(txtUsername, txtEmail, txtPassword, txtPhoneNumber) { view, message ->
-        view.error = message
-    }
-    
-    // Also works with direct view IDs for only in Activity or Fragment
-    minLengthList(3, R.id.txtUsername, R.id.txtPassword, R.id.txtPhoneNumber) { view, message ->
-        view.error = message
-    }
-```
+# 📃 License
 
+    Copyright 2018 Wajahat Karim
 
-You can apply all the built-in rules just by adding ```List``` suffix in the rule name. For example, ```nonEmpty``` becomes ```nonEmptyList```, the ```validEmail``` becomes ```validEmailList``` and so on. 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
