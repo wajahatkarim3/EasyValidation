@@ -1,8 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
 import com.wajahatkarim3.easyvalidation.core.view_ktx.validNumber
-import java.math.BigDecimal
-import java.math.BigInteger
 import java.text.NumberFormat
 
 /**
@@ -10,7 +8,7 @@ import java.text.NumberFormat
  *
  * @author Wajahat Karim
  */
-class NumberEqualToRule(val target: Number) : BaseRule {
+class NumberEqualToRule(val target: Number, var errorMsg: String = "Should be equal to $target") : BaseRule {
 
     override fun validate(text: String): Boolean {
 
@@ -40,6 +38,9 @@ class NumberEqualToRule(val target: Number) : BaseRule {
         }
     }
 
-    override fun getErrorMessage(): String = "Should be equal to $target"
+    override fun getErrorMessage(): String = errorMsg
 
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

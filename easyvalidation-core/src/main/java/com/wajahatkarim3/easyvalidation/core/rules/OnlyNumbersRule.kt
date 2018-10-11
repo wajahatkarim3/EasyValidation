@@ -7,9 +7,13 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class OnlyNumbersRule : BaseRule {
+class OnlyNumbersRule(var errorMsg: String = "Should not contain any alphabet characters!") : BaseRule {
 
     override fun validate(text: String): Boolean = Validator(text).regex("\\d+").check()
 
-    override fun getErrorMessage(): String = "Should not contain any alphabet characters!"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

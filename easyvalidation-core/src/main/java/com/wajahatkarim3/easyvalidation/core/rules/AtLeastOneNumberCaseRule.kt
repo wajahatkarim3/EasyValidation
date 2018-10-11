@@ -7,9 +7,13 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class AtLeastOneNumberCaseRule : BaseRule
+class AtLeastOneNumberCaseRule(var errorMsg: String = "At least one letter should be a number.") : BaseRule
 {
     override fun validate(text: String): Boolean = Validator(text).regex(".*\\d.*").check()
 
-    override fun getErrorMessage(): String = "At least one letter should be a number."
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

@@ -7,7 +7,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class EmailRule : BaseRule
+class EmailRule(var errorMsg: String = "Invalid Email Adress!") : BaseRule
 {
     override fun validate(text: String): Boolean {
         return Validator(text).regex(
@@ -20,7 +20,10 @@ class EmailRule : BaseRule
         ).check()
     }
 
-    override fun getErrorMessage(): String {
-        return "Invalid Email Address!"
+
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
     }
 }

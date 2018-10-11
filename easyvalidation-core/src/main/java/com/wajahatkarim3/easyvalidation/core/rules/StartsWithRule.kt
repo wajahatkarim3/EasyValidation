@@ -1,16 +1,11 @@
 package com.wajahatkarim3.easyvalidation.core.rules
 
-import com.wajahatkarim3.easyvalidation.core.view_ktx.validNumber
-import java.math.BigDecimal
-import java.math.BigInteger
-import java.text.NumberFormat
-
 /**
  * Returns true if the text starts with the given text
  *
  * @author Wajahat Karim
  */
-class StartsWithRule(val target: String) : BaseRule {
+class StartsWithRule(val target: String, var errorMsg: String = "Should start with $target") : BaseRule {
 
     override fun validate(text: String): Boolean {
 
@@ -20,6 +15,9 @@ class StartsWithRule(val target: String) : BaseRule {
         return text.startsWith(target)
     }
 
-    override fun getErrorMessage(): String = "Should start with $target"
+    override fun getErrorMessage(): String = errorMsg
 
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }

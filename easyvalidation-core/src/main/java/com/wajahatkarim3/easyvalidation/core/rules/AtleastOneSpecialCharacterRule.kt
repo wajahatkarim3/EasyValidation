@@ -7,7 +7,7 @@ import com.wajahatkarim3.easyvalidation.core.Validator
  *
  * @author Wajahat Karim
  */
-class AtleastOneSpecialCharacterRule : BaseRule
+class AtleastOneSpecialCharacterRule(var errorMsg: String ="Should contain at least 1 special characters") : BaseRule
 {
     override fun validate(text: String): Boolean {
         if (text.isEmpty())
@@ -16,5 +16,9 @@ class AtleastOneSpecialCharacterRule : BaseRule
         return !Validator(text).regex("[A-Za-z0-9]+").check()
     }
 
-    override fun getErrorMessage(): String = "Should contain at least 1 special characters"
+    override fun getErrorMessage(): String = errorMsg
+
+    override fun setError(msg: String) {
+        errorMsg = msg
+    }
 }
