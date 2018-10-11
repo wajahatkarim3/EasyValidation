@@ -9,7 +9,7 @@
 <div align="center">
     <!-- AppCenter -->
     <a href="https://appcenter.ms">
-        <img src="https://build.appcenter.ms/v0.1/apps/ffd5a8a1-b026-4466-9480-787e049f2f7a/branches/develop/badge"/>
+        <img src="https://build.appcenter.ms/v0.1/apps/ffd5a8a1-b026-4466-9480-787e049f2f7a/branches/master/badge"/>
     </a>    
     <!-- Bintray -->
     <a href="https://bintray.com/wajahatkarim3/EasyValidation/com.wajahatkarim3.EasyValidation.core/_latestVersion">
