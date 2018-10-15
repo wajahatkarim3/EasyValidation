@@ -36,6 +36,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        findViewById<Button>(R.id.btnCustomEmpty)
+                .setOnClickListener {
+                    edittext.validator()
+                            .nonEmpty("this is a custom empty message")
+                            .addErrorCallback { message ->
+                                edittext.error = message
+                            }
+                            .check()
+                }
+
         findViewById<Button>(R.id.btnMinLength)
                 .setOnClickListener {
 
