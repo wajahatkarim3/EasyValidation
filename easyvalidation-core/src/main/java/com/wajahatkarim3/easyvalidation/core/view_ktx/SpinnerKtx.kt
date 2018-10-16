@@ -12,14 +12,14 @@ fun Spinner.validator() : Validator
     return Validator(this.selectedItem.toString())
 }
 
-fun Spinner.nonEmpty() : Boolean
+fun Spinner.nonEmpty(errorMsg:String? = null) : Boolean
 {
-    return validator().nonEmpty().check()
+    return validator().nonEmpty(errorMsg).check()
 }
 
-fun Spinner.nonEmpty(callback: (message: String) -> Unit) : Boolean
+fun Spinner.nonEmpty(callback: (message: String) -> Unit, errorMsg:String? = null) : Boolean
 {
-    return validator().nonEmpty()
+    return validator().nonEmpty(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }

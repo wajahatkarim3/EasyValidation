@@ -12,14 +12,14 @@ fun AutoCompleteTextView.validator() : Validator
     return Validator(text.toString())
 }
 
-fun AutoCompleteTextView.nonEmpty() : Boolean
+fun AutoCompleteTextView.nonEmpty(errorMsg:String? = null) : Boolean
 {
-    return validator().nonEmpty().check()
+    return validator().nonEmpty(errorMsg).check()
 }
 
-fun AutoCompleteTextView.nonEmpty(callback: (message: String) -> Unit) : Boolean
+fun AutoCompleteTextView.nonEmpty(callback: (message: String) -> Unit, errorMsg:String? = null) : Boolean
 {
-    return validator().nonEmpty()
+    return validator().nonEmpty(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }

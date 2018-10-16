@@ -7,14 +7,14 @@ fun String.validator() : Validator
     return Validator(this)
 }
 
-fun String.nonEmpty() : Boolean
+fun String.nonEmpty(errorMsg:String? = null) : Boolean
 {
-    return validator().nonEmpty().check()
+    return validator().nonEmpty(errorMsg).check()
 }
 
-fun String.nonEmpty(callback: (message: String) -> Unit) : Boolean
+fun String.nonEmpty(callback: (message: String) -> Unit, errorMsg:String? = null) : Boolean
 {
-    return validator().nonEmpty()
+    return validator().nonEmpty(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }
