@@ -26,9 +26,26 @@ fun AutoCompleteTextView.nonEmpty(callback: (message: String) -> Unit, errorMsg:
             .check()
 }
 
-fun AutoCompleteTextView.minLength(minLength: Int) : Boolean
+fun AutoCompleteTextView.nonEmpty(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().minLength(minLength).check()
+    return validator().nonEmpty()
+            .addErrorCallback {
+                callback.invoke(it)
+            }
+            .check()
+}
+
+fun AutoCompleteTextView.minLength(minLength: Int, errorMsg: String? = null) : Boolean
+{
+    return validator().minLength(minLength, errorMsg).check()
+}
+
+fun AutoCompleteTextView.minLength(minLength: Int, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().minLength(minLength, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.minLength(minLength: Int, callback: (message: String) -> Unit) : Boolean
@@ -39,9 +56,17 @@ fun AutoCompleteTextView.minLength(minLength: Int, callback: (message: String) -
             }.check()
 }
 
-fun AutoCompleteTextView.maxLength(maxLength: Int) : Boolean
+fun AutoCompleteTextView.maxLength(maxLength: Int, errorMsg: String? = null) : Boolean
 {
-    return validator().maxLength(maxLength).check()
+    return validator().maxLength(maxLength, errorMsg).check()
+}
+
+fun AutoCompleteTextView.maxLength(maxLength: Int, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().maxLength(maxLength, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Boolean
@@ -52,9 +77,17 @@ fun AutoCompleteTextView.maxLength(maxLength: Int, callback: (message: String) -
             }.check()
 }
 
-fun AutoCompleteTextView.validEmail() : Boolean
+fun AutoCompleteTextView.validEmail(errorMsg: String? = null) : Boolean
 {
-    return validator().validEmail().check()
+    return validator().validEmail(errorMsg).check()
+}
+
+fun AutoCompleteTextView.validEmail(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validEmail(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.validEmail(callback: (message: String) -> Unit) : Boolean
@@ -65,9 +98,17 @@ fun AutoCompleteTextView.validEmail(callback: (message: String) -> Unit) : Boole
             }.check()
 }
 
-fun AutoCompleteTextView.validNumber() : Boolean
+fun AutoCompleteTextView.validNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().validNumber().check()
+    return validator().validNumber(errorMsg).check()
+}
+
+fun AutoCompleteTextView.validNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.validNumber(callback: (message: String) -> Unit) : Boolean
@@ -78,9 +119,17 @@ fun AutoCompleteTextView.validNumber(callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun AutoCompleteTextView.greaterThan(number: Number) : Boolean
+fun AutoCompleteTextView.greaterThan(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().greaterThan(number).check()
+    return validator().greaterThan(number, errorMsg).check()
+}
+
+fun AutoCompleteTextView.greaterThan(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().greaterThan(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.greaterThan(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -91,9 +140,17 @@ fun AutoCompleteTextView.greaterThan(number: Number, callback: (message: String)
             }.check()
 }
 
-fun AutoCompleteTextView.greaterThanOrEqual(number: Number) : Boolean
+fun AutoCompleteTextView.greaterThanOrEqual(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().greaterThanOrEqual(number).check()
+    return validator().greaterThanOrEqual(number, errorMsg).check()
+}
+
+fun AutoCompleteTextView.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().greaterThanOrEqual(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -104,9 +161,17 @@ fun AutoCompleteTextView.greaterThanOrEqual(number: Number, callback: (message: 
             }.check()
 }
 
-fun AutoCompleteTextView.lessThan(number: Number) : Boolean
+fun AutoCompleteTextView.lessThan(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().lessThan(number).check()
+    return validator().lessThan(number, errorMsg).check()
+}
+
+fun AutoCompleteTextView.lessThan(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().lessThan(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.lessThan(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -117,9 +182,17 @@ fun AutoCompleteTextView.lessThan(number: Number, callback: (message: String) ->
             }.check()
 }
 
-fun AutoCompleteTextView.lessThanOrEqual(number: Number) : Boolean
+fun AutoCompleteTextView.lessThanOrEqual(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().lessThanOrEqual(number).check()
+    return validator().lessThanOrEqual(number, errorMsg).check()
+}
+
+fun AutoCompleteTextView.lessThanOrEqual(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().lessThanOrEqual(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.lessThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -130,9 +203,17 @@ fun AutoCompleteTextView.lessThanOrEqual(number: Number, callback: (message: Str
             }.check()
 }
 
-fun AutoCompleteTextView.numberEqualTo(number: Number) : Boolean
+fun AutoCompleteTextView.numberEqualTo(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().numberEqualTo(number).check()
+    return validator().numberEqualTo(number, errorMsg).check()
+}
+
+fun AutoCompleteTextView.numberEqualTo(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().numberEqualTo(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.numberEqualTo(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -143,9 +224,17 @@ fun AutoCompleteTextView.numberEqualTo(number: Number, callback: (message: Strin
             }.check()
 }
 
-fun AutoCompleteTextView.allUperCase() : Boolean
+fun AutoCompleteTextView.allUperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().allUpperCase().check()
+    return validator().allUpperCase(errorMsg).check()
+}
+
+fun AutoCompleteTextView.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().allUpperCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.allUperCase(callback: (message: String) -> Unit) : Boolean
@@ -156,9 +245,18 @@ fun AutoCompleteTextView.allUperCase(callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun AutoCompleteTextView.allLowerCase() : Boolean
+
+fun AutoCompleteTextView.allLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().allLowerCase().check()
+    return validator().allLowerCase(errorMsg).check()
+}
+
+fun AutoCompleteTextView.allLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().allLowerCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.allLowerCase(callback: (message: String) -> Unit) : Boolean
@@ -169,9 +267,17 @@ fun AutoCompleteTextView.allLowerCase(callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneUpperCase() : Boolean
+fun AutoCompleteTextView.atleastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase().check()
+    return validator().atleastOneUpperCase(errorMsg).check()
+}
+
+fun AutoCompleteTextView.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneUpperCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
@@ -182,9 +288,17 @@ fun AutoCompleteTextView.atleastOneUpperCase(callback: (message: String) -> Unit
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneLowerCase() : Boolean
+fun AutoCompleteTextView.atleastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase().check()
+    return validator().atleastOneLowerCase(errorMsg).check()
+}
+
+fun AutoCompleteTextView.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneLowerCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
@@ -195,9 +309,17 @@ fun AutoCompleteTextView.atleastOneLowerCase(callback: (message: String) -> Unit
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneNumber() : Boolean
+fun AutoCompleteTextView.atleastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber().check()
+    return validator().atleastOneNumber(errorMsg).check()
+}
+
+fun AutoCompleteTextView.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
@@ -208,9 +330,17 @@ fun AutoCompleteTextView.atleastOneNumber(callback: (message: String) -> Unit) :
             }.check()
 }
 
-fun AutoCompleteTextView.startWithNumber() : Boolean
+fun AutoCompleteTextView.startWithNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().startWithNumber().check()
+    return validator().startWithNumber(errorMsg).check()
+}
+
+fun AutoCompleteTextView.startWithNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startWithNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.startWithNumber(callback: (message: String) -> Unit) : Boolean
@@ -221,9 +351,17 @@ fun AutoCompleteTextView.startWithNumber(callback: (message: String) -> Unit) : 
             }.check()
 }
 
-fun AutoCompleteTextView.startWithNonNumber() : Boolean
+fun AutoCompleteTextView.startWithNonNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().startWithNonNumber().check()
+    return validator().startWithNonNumber(errorMsg).check()
+}
+
+fun AutoCompleteTextView.startWithNonNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startWithNonNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
@@ -234,9 +372,17 @@ fun AutoCompleteTextView.startWithNonNumber(callback: (message: String) -> Unit)
             }.check()
 }
 
-fun AutoCompleteTextView.noNumbers() : Boolean
+fun AutoCompleteTextView.noNumbers(errorMsg: String? = null) : Boolean
 {
-    return validator().noNumbers().check()
+    return validator().noNumbers(errorMsg).check()
+}
+
+fun AutoCompleteTextView.noNumbers(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().noNumbers(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.noNumbers(callback: (message: String) -> Unit) : Boolean
@@ -247,9 +393,18 @@ fun AutoCompleteTextView.noNumbers(callback: (message: String) -> Unit) : Boolea
             }.check()
 }
 
-fun AutoCompleteTextView.onlyNumbers() : Boolean
+
+fun AutoCompleteTextView.onlyNumbers(errorMsg: String? = null) : Boolean
 {
-    return validator().onlyNumbers().check()
+    return validator().onlyNumbers(errorMsg).check()
+}
+
+fun AutoCompleteTextView.onlyNumbers(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().onlyNumbers(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.onlyNumbers(callback: (message: String) -> Unit) : Boolean
@@ -260,9 +415,17 @@ fun AutoCompleteTextView.onlyNumbers(callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun AutoCompleteTextView.noSpecialCharacters() : Boolean
+fun AutoCompleteTextView.noSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().noSpecialCharacters().check()
+    return validator().noSpecialCharacters(errorMsg).check()
+}
+
+fun AutoCompleteTextView.noSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().noSpecialCharacters(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
@@ -273,9 +436,17 @@ fun AutoCompleteTextView.noSpecialCharacters(callback: (message: String) -> Unit
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneSpecialCharacters() : Boolean
+fun AutoCompleteTextView.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters().check()
+    return validator().atleastOneSpecialCharacters(errorMsg).check()
+}
+
+fun AutoCompleteTextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneSpecialCharacters(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
@@ -286,9 +457,17 @@ fun AutoCompleteTextView.atleastOneSpecialCharacters(callback: (message: String)
             }.check()
 }
 
-fun AutoCompleteTextView.textEqualTo(target: String) : Boolean
+fun AutoCompleteTextView.textEqualTo(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().textEqualTo(target).check()
+    return validator().textEqualTo(target, errorMsg).check()
+}
+
+fun AutoCompleteTextView.textEqualTo(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().textEqualTo(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.textEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
@@ -299,9 +478,17 @@ fun AutoCompleteTextView.textEqualTo(target: String, callback: (message: String)
             }.check()
 }
 
-fun AutoCompleteTextView.textNotEqualTo(target: String) : Boolean
+fun AutoCompleteTextView.textNotEqualTo(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().textNotEqualTo(target).check()
+    return validator().textNotEqualTo(target, errorMsg).check()
+}
+
+fun AutoCompleteTextView.textNotEqualTo(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().textNotEqualTo(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.textNotEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
@@ -312,9 +499,17 @@ fun AutoCompleteTextView.textNotEqualTo(target: String, callback: (message: Stri
             }.check()
 }
 
-fun AutoCompleteTextView.startsWith(target: String) : Boolean
+fun AutoCompleteTextView.startsWith(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().startsWith(target).check()
+    return validator().startsWith(target, errorMsg).check()
+}
+
+fun AutoCompleteTextView.startsWith(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startsWith(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.startsWith(target: String, callback: (message: String) -> Unit) : Boolean
@@ -325,9 +520,17 @@ fun AutoCompleteTextView.startsWith(target: String, callback: (message: String) 
             }.check()
 }
 
-fun AutoCompleteTextView.endssWith(target: String) : Boolean
+fun AutoCompleteTextView.endssWith(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().endsWith(target).check()
+    return validator().endsWith(target, errorMsg).check()
+}
+
+fun AutoCompleteTextView.endssWith(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().endsWith(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.endssWith(target: String, callback: (message: String) -> Unit) : Boolean
@@ -338,9 +541,17 @@ fun AutoCompleteTextView.endssWith(target: String, callback: (message: String) -
             }.check()
 }
 
-fun AutoCompleteTextView.contains(target: String) : Boolean
+fun AutoCompleteTextView.contains(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().contains(target).check()
+    return validator().contains(target, errorMsg).check()
+}
+
+fun AutoCompleteTextView.contains(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().contains(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.contains(target: String, callback: (message: String) -> Unit) : Boolean
@@ -351,9 +562,17 @@ fun AutoCompleteTextView.contains(target: String, callback: (message: String) ->
             }.check()
 }
 
-fun AutoCompleteTextView.notContains(target: String) : Boolean
+fun AutoCompleteTextView.notContains(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().notContains(target).check()
+    return validator().notContains(target, errorMsg).check()
+}
+
+fun AutoCompleteTextView.notContains(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().notContains(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.notContains(target: String, callback: (message: String) -> Unit) : Boolean
@@ -364,9 +583,18 @@ fun AutoCompleteTextView.notContains(target: String, callback: (message: String)
             }.check()
 }
 
-fun AutoCompleteTextView.creditCardNumber() : Boolean
+
+fun AutoCompleteTextView.creditCardNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumber().check()
+    return validator().creditCardNumber(errorMsg).check()
+}
+
+fun AutoCompleteTextView.creditCardNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.creditCardNumber(callback: (message: String) -> Unit) : Boolean
@@ -377,9 +605,17 @@ fun AutoCompleteTextView.creditCardNumber(callback: (message: String) -> Unit) :
             }.check()
 }
 
-fun AutoCompleteTextView.creditCardNumberWithSpaces() : Boolean
+fun AutoCompleteTextView.creditCardNumberWithSpaces(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumberWithSpaces().check()
+    return validator().creditCardNumberWithSpaces(errorMsg).check()
+}
+
+fun AutoCompleteTextView.creditCardNumberWithSpaces(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumberWithSpaces(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Boolean
@@ -390,9 +626,17 @@ fun AutoCompleteTextView.creditCardNumberWithSpaces(callback: (message: String) 
             }.check()
 }
 
-fun AutoCompleteTextView.creditCardNumberWithDashes() : Boolean
+fun AutoCompleteTextView.creditCardNumberWithDashes(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumberWithDashes().check()
+    return validator().creditCardNumberWithDashes(errorMsg).check()
+}
+
+fun AutoCompleteTextView.creditCardNumberWithDashes(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumberWithDashes(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Boolean
@@ -403,9 +647,17 @@ fun AutoCompleteTextView.creditCardNumberWithDashes(callback: (message: String) 
             }.check()
 }
 
-fun AutoCompleteTextView.validUrl() : Boolean
+fun AutoCompleteTextView.validUrl(errorMsg: String? = null) : Boolean
 {
-    return validator().validUrl().check()
+    return validator().validUrl(errorMsg).check()
+}
+
+fun AutoCompleteTextView.validUrl(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validUrl(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.validUrl(callback: (message: String) -> Unit) : Boolean
@@ -416,9 +668,17 @@ fun AutoCompleteTextView.validUrl(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun AutoCompleteTextView.regex(pattern: String) : Boolean
+fun AutoCompleteTextView.regex(pattern: String, errorMsg: String? = null) : Boolean
 {
-    return validator().regex(pattern).check()
+    return validator().regex(pattern, errorMsg).check()
+}
+
+fun AutoCompleteTextView.regex(pattern: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().regex(pattern, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun AutoCompleteTextView.regex(pattern: String, callback: (message: String) -> Unit) : Boolean
