@@ -26,9 +26,26 @@ fun Spinner.nonEmpty(callback: (message: String) -> Unit, errorMsg:String? = nul
             .check()
 }
 
-fun Spinner.minLength(minLength: Int) : Boolean
+fun Spinner.nonEmpty(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().minLength(minLength).check()
+    return validator().nonEmpty()
+            .addErrorCallback {
+                callback.invoke(it)
+            }
+            .check()
+}
+
+fun Spinner.minLength(minLength: Int, errorMsg: String? = null) : Boolean
+{
+    return validator().minLength(minLength, errorMsg).check()
+}
+
+fun Spinner.minLength(minLength: Int, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().minLength(minLength, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.minLength(minLength: Int, callback: (message: String) -> Unit) : Boolean
@@ -39,9 +56,17 @@ fun Spinner.minLength(minLength: Int, callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun Spinner.maxLength(maxLength: Int) : Boolean
+fun Spinner.maxLength(maxLength: Int, errorMsg: String? = null) : Boolean
 {
-    return validator().maxLength(maxLength).check()
+    return validator().maxLength(maxLength, errorMsg).check()
+}
+
+fun Spinner.maxLength(maxLength: Int, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().maxLength(maxLength, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Boolean
@@ -52,9 +77,18 @@ fun Spinner.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun Spinner.validEmail() : Boolean
+
+fun Spinner.validEmail(errorMsg: String? = null) : Boolean
 {
-    return validator().validEmail().check()
+    return validator().validEmail(errorMsg).check()
+}
+
+fun Spinner.validEmail(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validEmail(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.validEmail(callback: (message: String) -> Unit) : Boolean
@@ -65,9 +99,17 @@ fun Spinner.validEmail(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.validNumber() : Boolean
+fun Spinner.validNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().validNumber().check()
+    return validator().validNumber(errorMsg).check()
+}
+
+fun Spinner.validNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.validNumber(callback: (message: String) -> Unit) : Boolean
@@ -78,9 +120,17 @@ fun Spinner.validNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.greaterThan(number: Number) : Boolean
+fun Spinner.greaterThan(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().greaterThan(number).check()
+    return validator().greaterThan(number, errorMsg).check()
+}
+
+fun Spinner.greaterThan(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().greaterThan(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.greaterThan(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -91,9 +141,17 @@ fun Spinner.greaterThan(number: Number, callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun Spinner.greaterThanOrEqual(number: Number) : Boolean
+fun Spinner.greaterThanOrEqual(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().greaterThanOrEqual(number).check()
+    return validator().greaterThanOrEqual(number, errorMsg).check()
+}
+
+fun Spinner.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().greaterThanOrEqual(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -104,9 +162,17 @@ fun Spinner.greaterThanOrEqual(number: Number, callback: (message: String) -> Un
             }.check()
 }
 
-fun Spinner.lessThan(number: Number) : Boolean
+fun Spinner.lessThan(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().lessThan(number).check()
+    return validator().lessThan(number, errorMsg).check()
+}
+
+fun Spinner.lessThan(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().lessThan(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.lessThan(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -117,9 +183,17 @@ fun Spinner.lessThan(number: Number, callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun Spinner.lessThanOrEqual(number: Number) : Boolean
+fun Spinner.lessThanOrEqual(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().lessThanOrEqual(number).check()
+    return validator().lessThanOrEqual(number, errorMsg).check()
+}
+
+fun Spinner.lessThanOrEqual(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().lessThanOrEqual(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.lessThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -130,9 +204,17 @@ fun Spinner.lessThanOrEqual(number: Number, callback: (message: String) -> Unit)
             }.check()
 }
 
-fun Spinner.numberEqualTo(number: Number) : Boolean
+fun Spinner.numberEqualTo(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().numberEqualTo(number).check()
+    return validator().numberEqualTo(number, errorMsg).check()
+}
+
+fun Spinner.numberEqualTo(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().numberEqualTo(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.numberEqualTo(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -143,9 +225,17 @@ fun Spinner.numberEqualTo(number: Number, callback: (message: String) -> Unit) :
             }.check()
 }
 
-fun Spinner.allUperCase() : Boolean
+fun Spinner.allUperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().allUpperCase().check()
+    return validator().allUpperCase(errorMsg).check()
+}
+
+fun Spinner.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().allUpperCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.allUperCase(callback: (message: String) -> Unit) : Boolean
@@ -156,9 +246,17 @@ fun Spinner.allUperCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.allLowerCase() : Boolean
+fun Spinner.allLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().allLowerCase().check()
+    return validator().allLowerCase(errorMsg).check()
+}
+
+fun Spinner.allLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().allLowerCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.allLowerCase(callback: (message: String) -> Unit) : Boolean
@@ -169,9 +267,17 @@ fun Spinner.allLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.atleastOneUpperCase() : Boolean
+fun Spinner.atleastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase().check()
+    return validator().atleastOneUpperCase(errorMsg).check()
+}
+
+fun Spinner.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneUpperCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
@@ -182,9 +288,17 @@ fun Spinner.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.atleastOneLowerCase() : Boolean
+fun Spinner.atleastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase().check()
+    return validator().atleastOneLowerCase(errorMsg).check()
+}
+
+fun Spinner.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneLowerCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
@@ -195,9 +309,17 @@ fun Spinner.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.atleastOneNumber() : Boolean
+fun Spinner.atleastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber().check()
+    return validator().atleastOneNumber(errorMsg).check()
+}
+
+fun Spinner.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
@@ -208,9 +330,17 @@ fun Spinner.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.startWithNumber() : Boolean
+fun Spinner.startWithNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().startWithNumber().check()
+    return validator().startWithNumber(errorMsg).check()
+}
+
+fun Spinner.startWithNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startWithNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.startWithNumber(callback: (message: String) -> Unit) : Boolean
@@ -221,9 +351,18 @@ fun Spinner.startWithNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.startWithNonNumber() : Boolean
+
+fun Spinner.startWithNonNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().startWithNonNumber().check()
+    return validator().startWithNonNumber(errorMsg).check()
+}
+
+fun Spinner.startWithNonNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startWithNonNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
@@ -234,9 +373,17 @@ fun Spinner.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.noNumbers() : Boolean
+fun Spinner.noNumbers(errorMsg: String? = null) : Boolean
 {
-    return validator().noNumbers().check()
+    return validator().noNumbers(errorMsg).check()
+}
+
+fun Spinner.noNumbers(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().noNumbers(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.noNumbers(callback: (message: String) -> Unit) : Boolean
@@ -247,9 +394,17 @@ fun Spinner.noNumbers(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.onlyNumbers() : Boolean
+fun Spinner.onlyNumbers(errorMsg: String? = null) : Boolean
 {
-    return validator().onlyNumbers().check()
+    return validator().onlyNumbers(errorMsg).check()
+}
+
+fun Spinner.onlyNumbers(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().onlyNumbers(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.onlyNumbers(callback: (message: String) -> Unit) : Boolean
@@ -260,9 +415,18 @@ fun Spinner.onlyNumbers(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.noSpecialCharacters() : Boolean
+
+fun Spinner.noSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().noSpecialCharacters().check()
+    return validator().noSpecialCharacters(errorMsg).check()
+}
+
+fun Spinner.noSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().noSpecialCharacters(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
@@ -273,9 +437,18 @@ fun Spinner.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.atleastOneSpecialCharacters() : Boolean
+
+fun Spinner.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters().check()
+    return validator().atleastOneSpecialCharacters(errorMsg).check()
+}
+
+fun Spinner.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneSpecialCharacters(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
@@ -286,9 +459,17 @@ fun Spinner.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun Spinner.textEqualTo(target: String) : Boolean
+fun Spinner.textEqualTo(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().textEqualTo(target).check()
+    return validator().textEqualTo(target, errorMsg).check()
+}
+
+fun Spinner.textEqualTo(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().textEqualTo(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.textEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
@@ -299,9 +480,17 @@ fun Spinner.textEqualTo(target: String, callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun Spinner.textNotEqualTo(target: String) : Boolean
+fun Spinner.textNotEqualTo(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().textNotEqualTo(target).check()
+    return validator().textNotEqualTo(target, errorMsg).check()
+}
+
+fun Spinner.textNotEqualTo(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().textNotEqualTo(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.textNotEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
@@ -312,9 +501,18 @@ fun Spinner.textNotEqualTo(target: String, callback: (message: String) -> Unit) 
             }.check()
 }
 
-fun Spinner.startsWith(target: String) : Boolean
+
+fun Spinner.startsWith(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().startsWith(target).check()
+    return validator().startsWith(target, errorMsg).check()
+}
+
+fun Spinner.startsWith(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startsWith(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.startsWith(target: String, callback: (message: String) -> Unit) : Boolean
@@ -325,9 +523,18 @@ fun Spinner.startsWith(target: String, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun Spinner.endssWith(target: String) : Boolean
+
+fun Spinner.endssWith(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().endsWith(target).check()
+    return validator().endsWith(target, errorMsg).check()
+}
+
+fun Spinner.endssWith(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().endsWith(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.endssWith(target: String, callback: (message: String) -> Unit) : Boolean
@@ -338,9 +545,17 @@ fun Spinner.endssWith(target: String, callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun Spinner.contains(target: String) : Boolean
+fun Spinner.contains(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().contains(target).check()
+    return validator().contains(target, errorMsg).check()
+}
+
+fun Spinner.contains(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().contains(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.contains(target: String, callback: (message: String) -> Unit) : Boolean
@@ -351,9 +566,17 @@ fun Spinner.contains(target: String, callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun Spinner.notContains(target: String) : Boolean
+fun Spinner.notContains(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().notContains(target).check()
+    return validator().notContains(target, errorMsg).check()
+}
+
+fun Spinner.notContains(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().notContains(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.notContains(target: String, callback: (message: String) -> Unit) : Boolean
@@ -364,9 +587,17 @@ fun Spinner.notContains(target: String, callback: (message: String) -> Unit) : B
             }.check()
 }
 
-fun Spinner.creditCardNumber() : Boolean
+fun Spinner.creditCardNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumber().check()
+    return validator().creditCardNumber(errorMsg).check()
+}
+
+fun Spinner.creditCardNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.creditCardNumber(callback: (message: String) -> Unit) : Boolean
@@ -377,9 +608,17 @@ fun Spinner.creditCardNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.creditCardNumberWithSpaces() : Boolean
+fun Spinner.creditCardNumberWithSpaces(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumberWithSpaces().check()
+    return validator().creditCardNumberWithSpaces(errorMsg).check()
+}
+
+fun Spinner.creditCardNumberWithSpaces(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumberWithSpaces(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Boolean
@@ -390,9 +629,17 @@ fun Spinner.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun Spinner.creditCardNumberWithDashes() : Boolean
+fun Spinner.creditCardNumberWithDashes(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumberWithDashes().check()
+    return validator().creditCardNumberWithDashes(errorMsg).check()
+}
+
+fun Spinner.creditCardNumberWithDashes(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumberWithDashes(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Boolean
@@ -403,9 +650,17 @@ fun Spinner.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun Spinner.validUrl() : Boolean
+fun Spinner.validUrl(errorMsg: String? = null) : Boolean
 {
-    return validator().validUrl().check()
+    return validator().validUrl(errorMsg).check()
+}
+
+fun Spinner.validUrl(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validUrl(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.validUrl(callback: (message: String) -> Unit) : Boolean
@@ -416,9 +671,18 @@ fun Spinner.validUrl(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.regex(pattern: String) : Boolean
+
+fun Spinner.regex(pattern: String, errorMsg: String? = null) : Boolean
 {
-    return validator().regex(pattern).check()
+    return validator().regex(pattern, errorMsg).check()
+}
+
+fun Spinner.regex(pattern: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().regex(pattern, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun Spinner.regex(pattern: String, callback: (message: String) -> Unit) : Boolean

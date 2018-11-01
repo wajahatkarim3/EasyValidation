@@ -21,9 +21,26 @@ fun String.nonEmpty(callback: (message: String) -> Unit, errorMsg:String? = null
             .check()
 }
 
-fun String.minLength(minLength: Int) : Boolean
+fun String.nonEmpty(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().minLength(minLength).check()
+    return validator().nonEmpty()
+            .addErrorCallback {
+                callback.invoke(it)
+            }
+            .check()
+}
+
+fun String.minLength(minLength: Int, errorMsg: String? = null) : Boolean
+{
+    return validator().minLength(minLength, errorMsg).check()
+}
+
+fun String.minLength(minLength: Int, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().minLength(minLength, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.minLength(minLength: Int, callback: (message: String) -> Unit) : Boolean
@@ -34,9 +51,17 @@ fun String.minLength(minLength: Int, callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun String.maxLength(maxLength: Int) : Boolean
+fun String.maxLength(maxLength: Int, errorMsg: String? = null) : Boolean
 {
-    return validator().maxLength(maxLength).check()
+    return validator().maxLength(maxLength, errorMsg).check()
+}
+
+fun String.maxLength(maxLength: Int, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().maxLength(maxLength, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Boolean
@@ -47,9 +72,17 @@ fun String.maxLength(maxLength: Int, callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun String.validEmail() : Boolean
+fun String.validEmail(errorMsg: String? = null) : Boolean
 {
-    return validator().validEmail().check()
+    return validator().validEmail(errorMsg).check()
+}
+
+fun String.validEmail(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validEmail(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.validEmail(callback: (message: String) -> Unit) : Boolean
@@ -60,9 +93,17 @@ fun String.validEmail(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.validNumber() : Boolean
+fun String.validNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().validNumber().check()
+    return validator().validNumber(errorMsg).check()
+}
+
+fun String.validNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.validNumber(callback: (message: String) -> Unit) : Boolean
@@ -73,9 +114,18 @@ fun String.validNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.greaterThan(number: Number) : Boolean
+
+fun String.greaterThan(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().greaterThan(number).check()
+    return validator().greaterThan(number, errorMsg).check()
+}
+
+fun String.greaterThan(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().greaterThan(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.greaterThan(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -86,9 +136,18 @@ fun String.greaterThan(number: Number, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun String.greaterThanOrEqual(number: Number) : Boolean
+
+fun String.greaterThanOrEqual(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().greaterThanOrEqual(number).check()
+    return validator().greaterThanOrEqual(number, errorMsg).check()
+}
+
+fun String.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().greaterThanOrEqual(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.greaterThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -99,9 +158,17 @@ fun String.greaterThanOrEqual(number: Number, callback: (message: String) -> Uni
             }.check()
 }
 
-fun String.lessThan(number: Number) : Boolean
+fun String.lessThan(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().lessThan(number).check()
+    return validator().lessThan(number, errorMsg).check()
+}
+
+fun String.lessThan(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().lessThan(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.lessThan(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -112,9 +179,18 @@ fun String.lessThan(number: Number, callback: (message: String) -> Unit) : Boole
             }.check()
 }
 
-fun String.lessThanOrEqual(number: Number) : Boolean
+
+fun String.lessThanOrEqual(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().lessThanOrEqual(number).check()
+    return validator().lessThanOrEqual(number, errorMsg).check()
+}
+
+fun String.lessThanOrEqual(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().lessThanOrEqual(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.lessThanOrEqual(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -125,9 +201,17 @@ fun String.lessThanOrEqual(number: Number, callback: (message: String) -> Unit) 
             }.check()
 }
 
-fun String.numberEqualTo(number: Number) : Boolean
+fun String.numberEqualTo(number: Number, errorMsg: String? = null) : Boolean
 {
-    return validator().numberEqualTo(number).check()
+    return validator().numberEqualTo(number, errorMsg).check()
+}
+
+fun String.numberEqualTo(number: Number, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().numberEqualTo(number, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.numberEqualTo(number: Number, callback: (message: String) -> Unit) : Boolean
@@ -138,9 +222,18 @@ fun String.numberEqualTo(number: Number, callback: (message: String) -> Unit) : 
             }.check()
 }
 
-fun String.allUperCase() : Boolean
+
+fun String.allUperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().allUpperCase().check()
+    return validator().allUpperCase(errorMsg).check()
+}
+
+fun String.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().allUpperCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.allUperCase(callback: (message: String) -> Unit) : Boolean
@@ -151,9 +244,17 @@ fun String.allUperCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.allLowerCase() : Boolean
+fun String.allLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().allLowerCase().check()
+    return validator().allLowerCase(errorMsg).check()
+}
+
+fun String.allLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().allLowerCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.allLowerCase(callback: (message: String) -> Unit) : Boolean
@@ -164,9 +265,17 @@ fun String.allLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.atleastOneUpperCase() : Boolean
+fun String.atleastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase().check()
+    return validator().atleastOneUpperCase(errorMsg).check()
+}
+
+fun String.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneUpperCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
@@ -177,9 +286,17 @@ fun String.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.atleastOneLowerCase() : Boolean
+fun String.atleastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase().check()
+    return validator().atleastOneLowerCase(errorMsg).check()
+}
+
+fun String.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneLowerCase(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
@@ -190,9 +307,17 @@ fun String.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.atleastOneNumber() : Boolean
+fun String.atleastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber().check()
+    return validator().atleastOneNumber(errorMsg).check()
+}
+
+fun String.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
@@ -203,9 +328,17 @@ fun String.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.startWithNumber() : Boolean
+fun String.startWithNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().startWithNumber().check()
+    return validator().startWithNumber(errorMsg).check()
+}
+
+fun String.startWithNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startWithNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.startWithNumber(callback: (message: String) -> Unit) : Boolean
@@ -216,9 +349,17 @@ fun String.startWithNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.startWithNonNumber() : Boolean
+fun String.startWithNonNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().startWithNonNumber().check()
+    return validator().startWithNonNumber(errorMsg).check()
+}
+
+fun String.startWithNonNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startWithNonNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
@@ -229,9 +370,18 @@ fun String.startWithNonNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.noNumbers() : Boolean
+
+fun String.noNumbers(errorMsg: String? = null) : Boolean
 {
-    return validator().noNumbers().check()
+    return validator().noNumbers(errorMsg).check()
+}
+
+fun String.noNumbers(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().noNumbers(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.noNumbers(callback: (message: String) -> Unit) : Boolean
@@ -242,9 +392,17 @@ fun String.noNumbers(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.onlyNumbers() : Boolean
+fun String.onlyNumbers(errorMsg: String? = null) : Boolean
 {
-    return validator().onlyNumbers().check()
+    return validator().onlyNumbers(errorMsg).check()
+}
+
+fun String.onlyNumbers(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().onlyNumbers(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.onlyNumbers(callback: (message: String) -> Unit) : Boolean
@@ -255,9 +413,17 @@ fun String.onlyNumbers(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.noSpecialCharacters() : Boolean
+fun String.noSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().noSpecialCharacters().check()
+    return validator().noSpecialCharacters(errorMsg).check()
+}
+
+fun String.noSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().noSpecialCharacters(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
@@ -268,9 +434,17 @@ fun String.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.atleastOneSpecialCharacters() : Boolean
+fun String.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters().check()
+    return validator().atleastOneSpecialCharacters(errorMsg).check()
+}
+
+fun String.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().atleastOneSpecialCharacters(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
@@ -281,9 +455,17 @@ fun String.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun String.textEqualTo(target: String) : Boolean
+fun String.textEqualTo(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().textEqualTo(target).check()
+    return validator().textEqualTo(target, errorMsg).check()
+}
+
+fun String.textEqualTo(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().textEqualTo(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.textEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
@@ -294,9 +476,17 @@ fun String.textEqualTo(target: String, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun String.textNotEqualTo(target: String) : Boolean
+fun String.textNotEqualTo(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().textNotEqualTo(target).check()
+    return validator().textNotEqualTo(target, errorMsg).check()
+}
+
+fun String.textNotEqualTo(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().textNotEqualTo(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.textNotEqualTo(target: String, callback: (message: String) -> Unit) : Boolean
@@ -307,9 +497,17 @@ fun String.textNotEqualTo(target: String, callback: (message: String) -> Unit) :
             }.check()
 }
 
-fun String.startsWith(target: String) : Boolean
+fun String.startsWith(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().startsWith(target).check()
+    return validator().startsWith(target, errorMsg).check()
+}
+
+fun String.startsWith(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().startsWith(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.startsWith(target: String, callback: (message: String) -> Unit) : Boolean
@@ -320,9 +518,17 @@ fun String.startsWith(target: String, callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun String.endssWith(target: String) : Boolean
+fun String.endssWith(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().endsWith(target).check()
+    return validator().endsWith(target, errorMsg).check()
+}
+
+fun String.endssWith(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().endsWith(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.endssWith(target: String, callback: (message: String) -> Unit) : Boolean
@@ -333,9 +539,17 @@ fun String.endssWith(target: String, callback: (message: String) -> Unit) : Bool
             }.check()
 }
 
-fun String.contains(target: String) : Boolean
+fun String.contains(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().contains(target).check()
+    return validator().contains(target, errorMsg).check()
+}
+
+fun String.contains(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().contains(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.contains(target: String, callback: (message: String) -> Unit) : Boolean
@@ -346,9 +560,17 @@ fun String.contains(target: String, callback: (message: String) -> Unit) : Boole
             }.check()
 }
 
-fun String.notContains(target: String) : Boolean
+fun String.notContains(target: String, errorMsg: String? = null) : Boolean
 {
-    return validator().notContains(target).check()
+    return validator().notContains(target, errorMsg).check()
+}
+
+fun String.notContains(target: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().notContains(target, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.notContains(target: String, callback: (message: String) -> Unit) : Boolean
@@ -359,9 +581,17 @@ fun String.notContains(target: String, callback: (message: String) -> Unit) : Bo
             }.check()
 }
 
-fun String.creditCardNumber() : Boolean
+fun String.creditCardNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumber().check()
+    return validator().creditCardNumber(errorMsg).check()
+}
+
+fun String.creditCardNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumber(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.creditCardNumber(callback: (message: String) -> Unit) : Boolean
@@ -372,9 +602,17 @@ fun String.creditCardNumber(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.creditCardNumberWithSpaces() : Boolean
+fun String.creditCardNumberWithSpaces(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumberWithSpaces().check()
+    return validator().creditCardNumberWithSpaces(errorMsg).check()
+}
+
+fun String.creditCardNumberWithSpaces(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumberWithSpaces(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Boolean
@@ -385,9 +623,17 @@ fun String.creditCardNumberWithSpaces(callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun String.creditCardNumberWithDashes() : Boolean
+fun String.creditCardNumberWithDashes(errorMsg: String? = null) : Boolean
 {
-    return validator().creditCardNumberWithDashes().check()
+    return validator().creditCardNumberWithDashes(errorMsg).check()
+}
+
+fun String.creditCardNumberWithDashes(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().creditCardNumberWithDashes(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Boolean
@@ -398,9 +644,17 @@ fun String.creditCardNumberWithDashes(callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun String.validUrl() : Boolean
+fun String.validUrl(errorMsg: String? = null) : Boolean
 {
-    return validator().validUrl().check()
+    return validator().validUrl(errorMsg).check()
+}
+
+fun String.validUrl(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().validUrl(errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.validUrl(callback: (message: String) -> Unit) : Boolean
@@ -411,9 +665,18 @@ fun String.validUrl(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.regex(pattern: String) : Boolean
+
+fun String.regex(pattern: String, errorMsg: String? = null) : Boolean
 {
-    return validator().regex(pattern).check()
+    return validator().regex(pattern, errorMsg).check()
+}
+
+fun String.regex(pattern: String, callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+{
+    return validator().regex(pattern, errorMsg)
+            .addErrorCallback {
+                callback.invoke(it)
+            }.check()
 }
 
 fun String.regex(pattern: String, callback: (message: String) -> Unit) : Boolean

@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
             //        .check()
 
             // Extension Way
-            edittext.nonEmpty() {
+            edittext.nonEmpty ( {
                edittext.error = "Cannot be empty! - Check"
-            }
+            }, "test message" )
         }
 
         findViewById<Button>(R.id.btnCustomEmpty)
@@ -64,9 +64,10 @@ class MainActivity : AppCompatActivity() {
                     //if (edittext.minLength(3) == false)
                     //    edittext.error = "Should be greater than 3"
 
-                    edittext.minLength(3) {
+                    edittext.minLength(3, {
+
                         edittext.error = "Should be greater than 3"
-                    }
+                    } )
 
                     //Toast.makeText(this, "Testing Toast", Toast.LENGTH_LONG).show()
 
