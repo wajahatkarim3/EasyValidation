@@ -6,12 +6,14 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
+
     defaultConfig {
         applicationId "com.wajahatkarim3.easyvalidation_demo"
-        minSdkVersion 18
+        minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -28,11 +30,15 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
     // Kotlin
     implementation Deps.kotlin_stdlib
+
     // Support
     implementation Deps.support_appcompat_v7
     implementation Deps.constraint_layout
+    implementation Deps.support_annotations
+
     // Unit Testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
