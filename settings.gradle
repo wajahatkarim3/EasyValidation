@@ -1,1 +1,1 @@
-include ':app', ':easyvalidation-core'
+include ':app', ':easyvalidation-core', ':easyvalidation-toasts'

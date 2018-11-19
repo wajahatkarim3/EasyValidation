@@ -9,6 +9,7 @@ import com.wajahatkarim3.easyvalidation.core.collection_ktx.nonEmptyList
 import com.wajahatkarim3.easyvalidation.core.rules.GreaterThanRule
 import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
+import com.wajahatkarim3.easyvalidation.toasts.view_ktx.nonEmptyToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,9 +32,13 @@ class MainActivity : AppCompatActivity() {
             //        .check()
 
             // Extension Way
-            edittext.nonEmpty ( {
-               edittext.error = "Cannot be empty! - Check"
-            }, "test message" )
+            //edittext.nonEmpty ( {
+            //   edittext.error = "Cannot be empty! - Check"
+            //}, "test message" )
+
+            edittext.nonEmptyToast({
+                edittext.setError(it)
+            })
         }
 
         findViewById<Button>(R.id.btnCustomEmpty)
