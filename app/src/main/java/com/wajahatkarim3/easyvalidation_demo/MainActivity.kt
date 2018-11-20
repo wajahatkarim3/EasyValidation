@@ -9,6 +9,7 @@ import com.wajahatkarim3.easyvalidation.core.collection_ktx.nonEmptyList
 import com.wajahatkarim3.easyvalidation.core.rules.GreaterThanRule
 import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
+import com.wajahatkarim3.easyvalidation.toasts.view_ktx.maxLengthToast
 import com.wajahatkarim3.easyvalidation.toasts.view_ktx.nonEmptyToast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -36,9 +37,7 @@ class MainActivity : AppCompatActivity() {
             //   edittext.error = "Cannot be empty! - Check"
             //}, "test message" )
 
-            edittext.nonEmptyToast({
-                edittext.setError(it)
-            })
+            edittext.maxLengthToast(5,"sorry you can not enter more than 5 characters")
         }
 
         findViewById<Button>(R.id.btnCustomEmpty)
