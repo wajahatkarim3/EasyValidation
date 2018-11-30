@@ -67,7 +67,7 @@
 <br/>
 
 ## ✔️ Changelog
-Changes exist in the [releases](https://github.com/wajahatkarim3/MediumClap-Android/releases) tab.
+Changes exist in the [releases](https://github.com/wajahatkarim3/EasyValidation/releases) tab.
 
 ## 💻 Installation
 Add this in app's ```build.gradle``` file:
