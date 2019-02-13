@@ -1,3 +1,7 @@
+<div align="center"><p><a href="https://android.jlelse.eu/quickly-easily-validating-your-text-with-easy-validation-498d7eb54b0b"><img alt="New in the EasyValidation" align="center" src="https://img.shields.io/badge/%F0%9F%93%84%20-NEW-red.svg" /></a>&nbsp;
+The article on how this library was created is now published. You can <a href="https://android.jlelse.eu/quickly-easily-validating-your-text-with-easy-validation-498d7eb54b0b">read it on this link here. →</a>.
+</p></div>
+
 ![](https://raw.githubusercontent.com/wajahatkarim3/EasyValidation/master/Art/easyvalidlogo.jpg)
 
 
