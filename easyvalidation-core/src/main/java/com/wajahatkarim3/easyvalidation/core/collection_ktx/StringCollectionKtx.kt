@@ -1,5 +1,7 @@
 package com.wajahatkarim3.easyvalidation.core.collection_ktx
 
+import android.content.Context
+import android.widget.Toast
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
 
 fun Any.nonEmptyList(vararg strsList: String, callback: (view: String, message: String) -> Unit) : Boolean
@@ -566,4 +568,6 @@ fun Any.regexList(pattern: String, vararg strsList: String, callback: (view: Str
     }
     return result
 }
+
+fun Context.toast(message:String) = Toast.makeText(this,message,Toast.LENGTH_LONG).show()
 
