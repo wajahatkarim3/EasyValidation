@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Contribute Hacktober-EasyValidation.iml" filepath="$PROJECT_DIR$/Contribute Hacktober-EasyValidation.iml" />
       <module fileurl="file://$PROJECT_DIR$/EasyValidation.iml" filepath="$PROJECT_DIR$/EasyValidation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/EasyValidation-app.iml" filepath="$PROJECT_DIR$/app/EasyValidation-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/EasyValidation-buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/EasyValidation-buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyvalidation-core/EasyValidation-easyvalidation-core.iml" filepath="$PROJECT_DIR$/easyvalidation-core/EasyValidation-easyvalidation-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
       <module fileurl="file://$PROJECT_DIR$/easyvalidation-core/easyvalidation-core.iml" filepath="$PROJECT_DIR$/easyvalidation-core/easyvalidation-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyvalidation-toasts/easyvalidation-toasts.iml" filepath="$PROJECT_DIR$/easyvalidation-toasts/easyvalidation-toasts.iml" />
       <module fileurl="file://$PROJECT_DIR$/ev.iml" filepath="$PROJECT_DIR$/ev.iml" />
     </modules>
   </component>
