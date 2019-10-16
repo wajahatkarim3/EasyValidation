@@ -3,14 +3,13 @@ package com.wajahatkarim3.easyvalidation.core.rules
 import java.util.*
 
 
-
 /**
  * Returns true if the text is valid credit card number
  * This supports Visa, Master Card, American Express, Diners Club, Discover, and JCB
  *
  * @author Wajahat Karim
  */
-class CreditCardRule(var errorMsg: String = "Invalid Credit Card Number!") : BaseRule {
+open class CreditCardRule(var errorMsg: String = "Invalid Credit Card Number!") : BaseRule {
 
     override fun validate(text: String): Boolean {
         val listOfPattern = ArrayList<String>()
@@ -27,8 +26,7 @@ class CreditCardRule(var errorMsg: String = "Invalid Credit Card Number!") : Bas
         val ptJcb = "^(?:2131|1800|35[0-9]{3})[0-9]{3,}$"
         listOfPattern.add(ptJcb)
 
-        for (pattern in listOfPattern)
-        {
+        for (pattern in listOfPattern) {
             if (text.matches(Regex(pattern)))
                 return true
         }
