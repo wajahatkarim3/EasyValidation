@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".example2.LoginShowcaseActivity" />
         <activity android:name=".example1.VerificationMethodShowcaseActivity" />
     </application>
 
