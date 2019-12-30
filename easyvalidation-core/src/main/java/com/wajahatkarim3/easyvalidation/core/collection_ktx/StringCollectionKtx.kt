@@ -184,7 +184,7 @@ fun Any.allUperCaseList(vararg strsList: String, callback: (view: String, messag
     var result = false
     for (str in strsList)
     {
-        result = str.allUperCase() {
+        result = str.allUpperCase() {
             callback.invoke(str, it)
         }
 
@@ -220,7 +220,7 @@ fun Any.atleastOneUpperCaseList(vararg strsList: String, callback: (view: String
     var result = false
     for (str in strsList)
     {
-        result = str.atleastOneUpperCase() {
+        result = str.atLeastOneUpperCase() {
             callback.invoke(str, it)
         }
 
@@ -238,7 +238,7 @@ fun Any.atleastOneLowerCaseList(vararg strsList: String, callback: (view: String
     var result = false
     for (str in strsList)
     {
-        result = str.atleastOneLowerCase() {
+        result = str.atLeastOneLowerCase() {
             callback.invoke(str, it)
         }
 
@@ -255,7 +255,7 @@ fun Any.atleastOneNumberList(vararg strsList: String, callback: (view: String, m
     var result = false
     for (str in strsList)
     {
-        result = str.atleastOneNumber() {
+        result = str.atLeastOneNumber() {
             callback.invoke(str, it)
         }
 

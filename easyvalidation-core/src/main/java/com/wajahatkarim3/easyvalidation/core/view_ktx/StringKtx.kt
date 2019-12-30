@@ -223,12 +223,12 @@ fun String.numberEqualTo(number: Number, callback: (message: String) -> Unit) : 
 }
 
 
-fun String.allUperCase(errorMsg: String? = null) : Boolean
+fun String.allUpperCase(errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg).check()
 }
 
-fun String.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun String.allUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg)
             .addErrorCallback {
@@ -236,7 +236,7 @@ fun String.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = 
             }.check()
 }
 
-fun String.allUperCase(callback: (message: String) -> Unit) : Boolean
+fun String.allUpperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allUpperCase()
             .addErrorCallback {
@@ -265,64 +265,64 @@ fun String.allLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun String.atleastOneUpperCase(errorMsg: String? = null) : Boolean
+fun String.atLeastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg).check()
+    return validator().atLeastOneUpperCase(errorMsg).check()
 }
 
-fun String.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun String.atLeastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun String.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
+fun String.atLeastOneUpperCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun String.atleastOneLowerCase(errorMsg: String? = null) : Boolean
+fun String.atLeastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg).check()
+    return validator().atLeastOneLowerCase(errorMsg).check()
 }
 
-fun String.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun String.atLeastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun String.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
+fun String.atLeastOneLowerCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun String.atleastOneNumber(errorMsg: String? = null) : Boolean
+fun String.atLeastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg).check()
+    return validator().atLeastOneNumber(errorMsg).check()
 }
 
-fun String.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun String.atLeastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun String.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
+fun String.atLeastOneNumber(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -436,12 +436,12 @@ fun String.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 
 fun String.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg).check()
+    return validator().atLeastOneSpecialCharacters(errorMsg).check()
 }
 
 fun String.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -449,7 +449,7 @@ fun String.atleastOneSpecialCharacters(callback: (message: String) -> Unit, erro
 
 fun String.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()

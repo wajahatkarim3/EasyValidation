@@ -1,7 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core.collection_ktx
 
 import android.app.Activity
-import android.content.Context
 import android.support.v4.app.Fragment
 import android.widget.AutoCompleteTextView
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
@@ -532,7 +531,7 @@ fun Any.allUperCaseList(vararg autoCompletesList: AutoCompleteTextView, callback
     var result = false
     for (autocomplete in autoCompletesList)
     {
-        result = autocomplete.allUperCase() {
+        result = autocomplete.allUpperCase() {
             callback.invoke(autocomplete, it)
         }
 
@@ -547,7 +546,7 @@ fun Activity.allUperCaseList(vararg autoCompletesIds: Int, callback: (view: Auto
     var result = false
     for (id in autoCompletesIds)
     {
-        result = findViewById<AutoCompleteTextView>(id).allUperCase() {
+        result = findViewById<AutoCompleteTextView>(id).allUpperCase() {
             callback.invoke(findViewById<AutoCompleteTextView>(id), it)
         }
 
@@ -565,7 +564,7 @@ fun Fragment.allUperCaseList(vararg autoCompletesIds: Int, callback: (view: Auto
         view?.let { v ->
             for (id in autoCompletesIds)
             {
-                result = v.findViewById<AutoCompleteTextView>(id).allUperCase() {
+                result = v.findViewById<AutoCompleteTextView>(id).allUpperCase() {
                     callback.invoke(v.findViewById<AutoCompleteTextView>(id), it)
                 }
 
@@ -636,7 +635,7 @@ fun Any.atleastOneUpperCaseList(vararg autoCompletesList: AutoCompleteTextView, 
     var result = false
     for (autocomplete in autoCompletesList)
     {
-        result = autocomplete.atleastOneUpperCase() {
+        result = autocomplete.atLeastOneUpperCase() {
             callback.invoke(autocomplete, it)
         }
 
@@ -651,7 +650,7 @@ fun Activity.atleastOneUpperCaseList(vararg autoCompletesIds: Int, callback: (vi
     var result = false
     for (id in autoCompletesIds)
     {
-        result = findViewById<AutoCompleteTextView>(id).atleastOneUpperCase() {
+        result = findViewById<AutoCompleteTextView>(id).atLeastOneUpperCase() {
             callback.invoke(findViewById<AutoCompleteTextView>(id), it)
         }
 
@@ -669,7 +668,7 @@ fun Fragment.atleastOneUpperCaseList(vararg autoCompletesIds: Int, callback: (vi
         view?.let { v ->
             for (id in autoCompletesIds)
             {
-                result = v.findViewById<AutoCompleteTextView>(id).atleastOneUpperCase() {
+                result = v.findViewById<AutoCompleteTextView>(id).atLeastOneUpperCase() {
                     callback.invoke(v.findViewById<AutoCompleteTextView>(id), it)
                 }
 
@@ -688,7 +687,7 @@ fun Any.atleastOneLowerCaseList(vararg autoCompletesList: AutoCompleteTextView, 
     var result = false
     for (autocomplete in autoCompletesList)
     {
-        result = autocomplete.atleastOneLowerCase() {
+        result = autocomplete.atLeastOneLowerCase() {
             callback.invoke(autocomplete, it)
         }
 
@@ -703,7 +702,7 @@ fun Activity.atleastOneLowerCaseList(vararg autoCompletesIds: Int, callback: (vi
     var result = false
     for (id in autoCompletesIds)
     {
-        result = findViewById<AutoCompleteTextView>(id).atleastOneLowerCase() {
+        result = findViewById<AutoCompleteTextView>(id).atLeastOneLowerCase() {
             callback.invoke(findViewById<AutoCompleteTextView>(id), it)
         }
 
@@ -721,7 +720,7 @@ fun Fragment.atleastOneLowerCaseList(vararg autoCompletesIds: Int, callback: (vi
         view?.let { v ->
             for (id in autoCompletesIds)
             {
-                result = v.findViewById<AutoCompleteTextView>(id).atleastOneLowerCase() {
+                result = v.findViewById<AutoCompleteTextView>(id).atLeastOneLowerCase() {
                     callback.invoke(v.findViewById<AutoCompleteTextView>(id), it)
                 }
 
@@ -740,7 +739,7 @@ fun Any.atleastOneNumberList(vararg autoCompletesList: AutoCompleteTextView, cal
     var result = false
     for (autocomplete in autoCompletesList)
     {
-        result = autocomplete.atleastOneNumber() {
+        result = autocomplete.atLeastOneNumber() {
             callback.invoke(autocomplete, it)
         }
 
@@ -755,7 +754,7 @@ fun Activity.atleastOneNumberList(vararg autoCompletesIds: Int, callback: (view:
     var result = false
     for (id in autoCompletesIds)
     {
-        result = findViewById<AutoCompleteTextView>(id).atleastOneNumber() {
+        result = findViewById<AutoCompleteTextView>(id).atLeastOneNumber() {
             callback.invoke(findViewById<AutoCompleteTextView>(id), it)
         }
 
@@ -773,7 +772,7 @@ fun Fragment.atleastOneNumberList(vararg autoCompletesIds: Int, callback: (view:
         view?.let { v ->
             for (id in autoCompletesIds)
             {
-                result = v.findViewById<AutoCompleteTextView>(id).atleastOneNumber() {
+                result = v.findViewById<AutoCompleteTextView>(id).atLeastOneNumber() {
                     callback.invoke(v.findViewById<AutoCompleteTextView>(id), it)
                 }
 

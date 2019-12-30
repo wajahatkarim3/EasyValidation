@@ -1,7 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core.collection_ktx
 
 import android.app.Activity
-import android.content.Context
 import android.support.v4.app.Fragment
 import android.widget.Spinner
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
@@ -532,7 +531,7 @@ fun Any.allUperCaseList(vararg spinnersList: Spinner, callback: (view: Spinner, 
     var result = false
     for (spinner in spinnersList)
     {
-        result = spinner.allUperCase() {
+        result = spinner.allUpperCase() {
             callback.invoke(spinner, it)
         }
 
@@ -547,7 +546,7 @@ fun Activity.allUperCaseList(vararg spinnerIds: Int, callback: (view: Spinner, m
     var result = false
     for (id in spinnerIds)
     {
-        result = findViewById<Spinner>(id).allUperCase() {
+        result = findViewById<Spinner>(id).allUpperCase() {
             callback.invoke(findViewById<Spinner>(id), it)
         }
 
@@ -565,7 +564,7 @@ fun Fragment.allUperCaseList(vararg spinnerIds: Int, callback: (view: Spinner, m
         view?.let { v ->
             for (id in spinnerIds)
             {
-                result = v.findViewById<Spinner>(id).allUperCase() {
+                result = v.findViewById<Spinner>(id).allUpperCase() {
                     callback.invoke(v.findViewById<Spinner>(id), it)
                 }
 
@@ -636,7 +635,7 @@ fun Any.atleastOneUpperCaseList(vararg spinnersList: Spinner, callback: (view: S
     var result = false
     for (spinner in spinnersList)
     {
-        result = spinner.atleastOneUpperCase() {
+        result = spinner.atLeastOneUpperCase() {
             callback.invoke(spinner, it)
         }
 
@@ -651,7 +650,7 @@ fun Activity.atleastOneUpperCaseList(vararg spinnerIds: Int, callback: (view: Sp
     var result = false
     for (id in spinnerIds)
     {
-        result = findViewById<Spinner>(id).atleastOneUpperCase() {
+        result = findViewById<Spinner>(id).atLeastOneUpperCase() {
             callback.invoke(findViewById<Spinner>(id), it)
         }
 
@@ -669,7 +668,7 @@ fun Fragment.atleastOneUpperCaseList(vararg spinnerIds: Int, callback: (view: Sp
         view?.let { v ->
             for (id in spinnerIds)
             {
-                result = v.findViewById<Spinner>(id).atleastOneUpperCase() {
+                result = v.findViewById<Spinner>(id).atLeastOneUpperCase() {
                     callback.invoke(v.findViewById<Spinner>(id), it)
                 }
 
@@ -688,7 +687,7 @@ fun Any.atleastOneLowerCaseList(vararg spinnersList: Spinner, callback: (view: S
     var result = false
     for (spinner in spinnersList)
     {
-        result = spinner.atleastOneLowerCase() {
+        result = spinner.atLeastOneLowerCase() {
             callback.invoke(spinner, it)
         }
 
@@ -703,7 +702,7 @@ fun Activity.atleastOneLowerCaseList(vararg spinnerIds: Int, callback: (view: Sp
     var result = false
     for (id in spinnerIds)
     {
-        result = findViewById<Spinner>(id).atleastOneLowerCase() {
+        result = findViewById<Spinner>(id).atLeastOneLowerCase() {
             callback.invoke(findViewById<Spinner>(id), it)
         }
 
@@ -721,7 +720,7 @@ fun Fragment.atleastOneLowerCaseList(vararg spinnerIds: Int, callback: (view: Sp
         view?.let { v ->
             for (id in spinnerIds)
             {
-                result = v.findViewById<Spinner>(id).atleastOneLowerCase() {
+                result = v.findViewById<Spinner>(id).atLeastOneLowerCase() {
                     callback.invoke(v.findViewById<Spinner>(id), it)
                 }
 
@@ -740,7 +739,7 @@ fun Any.atleastOneNumberList(vararg spinnersList: Spinner, callback: (view: Spin
     var result = false
     for (spinner in spinnersList)
     {
-        result = spinner.atleastOneNumber() {
+        result = spinner.atLeastOneNumber() {
             callback.invoke(spinner, it)
         }
 
@@ -755,7 +754,7 @@ fun Activity.atleastOneNumberList(vararg spinnerIds: Int, callback: (view: Spinn
     var result = false
     for (id in spinnerIds)
     {
-        result = findViewById<Spinner>(id).atleastOneNumber() {
+        result = findViewById<Spinner>(id).atLeastOneNumber() {
             callback.invoke(findViewById<Spinner>(id), it)
         }
 
@@ -773,7 +772,7 @@ fun Fragment.atleastOneNumberList(vararg spinnerIds: Int, callback: (view: Spinn
         view?.let { v ->
             for (id in spinnerIds)
             {
-                result = v.findViewById<Spinner>(id).atleastOneNumber() {
+                result = v.findViewById<Spinner>(id).atLeastOneNumber() {
                     callback.invoke(v.findViewById<Spinner>(id), it)
                 }
 

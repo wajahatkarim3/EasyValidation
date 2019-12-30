@@ -174,21 +174,21 @@ class Validator(val text: String)
         return this
     }
 
-    fun atleastOneUpperCase(errorMsg:String? = null) : Validator
+    fun atLeastOneUpperCase(errorMsg:String? = null) : Validator
     {
         val rule = errorMsg?.let {AtLeastOneUpercCaseRule(errorMsg)}?: AtLeastOneUpercCaseRule()
         addRule(rule)
         return this
     }
 
-    fun atleastOneLowerCase(errorMsg:String? = null) : Validator
+    fun atLeastOneLowerCase(errorMsg:String? = null) : Validator
     {
         val rule = errorMsg?.let {AtLeastOneLowerCaseRule(errorMsg)}?: AtLeastOneLowerCaseRule()
         addRule(rule)
         return this
     }
 
-    fun atleastOneNumber(errorMsg:String? = null) : Validator
+    fun atLeastOneNumber(errorMsg:String? = null) : Validator
     {
         val rule = errorMsg?.let {AtLeastOneNumberCaseRule(errorMsg)}?: AtLeastOneNumberCaseRule()
         addRule(rule)
@@ -230,7 +230,7 @@ class Validator(val text: String)
         return this
     }
 
-    fun atleastOneSpecialCharacters(errorMsg:String? = null) : Validator
+    fun atLeastOneSpecialCharacters(errorMsg:String? = null) : Validator
     {
         val rule = errorMsg?.let {AtleastOneSpecialCharacterRule(errorMsg)}?: AtleastOneSpecialCharacterRule()
         addRule(rule)

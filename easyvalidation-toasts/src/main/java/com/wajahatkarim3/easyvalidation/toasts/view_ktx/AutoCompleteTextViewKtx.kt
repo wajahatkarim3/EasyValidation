@@ -280,13 +280,13 @@ fun AutoCompleteTextView.allLowerCaseToast(callback: (message: String) -> Unit):
 }
 
 fun AutoCompleteTextView.atleastOneUpperCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneUpperCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun AutoCompleteTextView.atleastOneUpperCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -294,7 +294,7 @@ fun AutoCompleteTextView.atleastOneUpperCaseToast(callback: (message: String) ->
 }
 
 fun AutoCompleteTextView.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 showToast(it)
                 callback.invoke(it)
@@ -302,13 +302,13 @@ fun AutoCompleteTextView.atleastOneUpperCaseToast(callback: (message: String) ->
 }
 
 fun AutoCompleteTextView.atleastOneLowerCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneLowerCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun AutoCompleteTextView.atleastOneLowerCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -316,7 +316,7 @@ fun AutoCompleteTextView.atleastOneLowerCaseToast(callback: (message: String) ->
 }
 
 fun AutoCompleteTextView.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)
@@ -324,13 +324,13 @@ fun AutoCompleteTextView.atleastOneLowerCaseToast(callback: (message: String) ->
 }
 
 fun AutoCompleteTextView.atleastOneNumberToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg).addErrorCallback {
+    return validator().atLeastOneNumber(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun AutoCompleteTextView.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -338,7 +338,7 @@ fun AutoCompleteTextView.atleastOneNumberToast(callback: (message: String) -> Un
 }
 
 fun AutoCompleteTextView.atleastOneNumberToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)
@@ -458,13 +458,13 @@ fun AutoCompleteTextView.noSpecialCharactersToast(callback: (message: String) ->
 }
 
 fun AutoCompleteTextView.atleastOneSpecialCharactersToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg).addErrorCallback {
+    return validator().atLeastOneSpecialCharacters(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun AutoCompleteTextView.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -472,7 +472,7 @@ fun AutoCompleteTextView.atleastOneSpecialCharactersToast(callback: (message: St
 }
 
 fun AutoCompleteTextView.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)

@@ -2,10 +2,6 @@ package com.wajahatkarim3.easyvalidation.core.view_ktx
 
 import android.widget.TextView
 import com.wajahatkarim3.easyvalidation.core.Validator
-import java.math.BigDecimal
-import java.math.BigInteger
-import java.util.regex.Pattern
-import kotlin.math.max
 
 fun TextView.validator(): Validator {
     return Validator(text.toString())
@@ -222,12 +218,12 @@ fun TextView.numberEqualTo(number: Number, callback: (message: String) -> Unit) 
             }.check()
 }
 
-fun TextView.allUperCase(errorMsg: String? = null) : Boolean
+fun TextView.allUpperCase(errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg).check()
 }
 
-fun TextView.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun TextView.allUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg)
             .addErrorCallback {
@@ -235,7 +231,7 @@ fun TextView.allUperCase(callback: (message: String) -> Unit, errorMsg: String? 
             }.check()
 }
 
-fun TextView.allUperCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.allUpperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allUpperCase()
             .addErrorCallback {
@@ -265,64 +261,64 @@ fun TextView.allLowerCase(callback: (message: String) -> Unit) : Boolean
 }
 
 
-fun TextView.atleastOneUpperCase(errorMsg: String? = null) : Boolean
+fun TextView.atLeastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg).check()
+    return validator().atLeastOneUpperCase(errorMsg).check()
 }
 
-fun TextView.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun TextView.atLeastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun TextView.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.atLeastOneUpperCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun TextView.atleastOneLowerCase(errorMsg: String? = null) : Boolean
+fun TextView.atLeastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg).check()
+    return validator().atLeastOneLowerCase(errorMsg).check()
 }
 
-fun TextView.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun TextView.atLeastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun TextView.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
+fun TextView.atLeastOneLowerCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun TextView.atleastOneNumber(errorMsg: String? = null) : Boolean
+fun TextView.atLeastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg).check()
+    return validator().atLeastOneNumber(errorMsg).check()
 }
 
-fun TextView.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun TextView.atLeastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun TextView.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
+fun TextView.atLeastOneNumber(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -436,12 +432,12 @@ fun TextView.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 
 fun TextView.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg).check()
+    return validator().atLeastOneSpecialCharacters(errorMsg).check()
 }
 
 fun TextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -449,7 +445,7 @@ fun TextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit, er
 
 fun TextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
