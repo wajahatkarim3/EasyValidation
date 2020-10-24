@@ -271,13 +271,13 @@ fun EditText.allLowerCaseToast(callback: (message: String) -> Unit): Boolean {
 
 
 fun EditText.atleastOneUpperCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneUpperCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun EditText.atleastOneUpperCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -285,7 +285,7 @@ fun EditText.atleastOneUpperCaseToast(callback: (message: String) -> Unit, error
 }
 
 fun EditText.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
 
                 showToast(it)
@@ -294,14 +294,14 @@ fun EditText.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Bool
 }
 
 fun EditText.atleastOneLowerCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneLowerCase(errorMsg).addErrorCallback {
 
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun EditText.atleastOneLowerCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -309,7 +309,7 @@ fun EditText.atleastOneLowerCaseToast(callback: (message: String) -> Unit, error
 }
 
 fun EditText.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
 
                 showToast(it)
@@ -318,14 +318,14 @@ fun EditText.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Bool
 }
 
 fun EditText.atleastOneNumberToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg).addErrorCallback {
+    return validator().atLeastOneNumber(errorMsg).addErrorCallback {
 
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun EditText.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
 
                 showToast(errorMsg ?: it)
@@ -334,7 +334,7 @@ fun EditText.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg
 }
 
 fun EditText.atleastOneNumberToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
 
                 showToast(it)
@@ -470,7 +470,7 @@ fun EditText.noSpecialCharactersToast(callback: (message: String) -> Unit): Bool
 }
 
 fun EditText.atleastOneSpecialCharactersToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg).addErrorCallback {
+    return validator().atLeastOneSpecialCharacters(errorMsg).addErrorCallback {
 
         showToast(errorMsg ?: it)
 
@@ -478,7 +478,7 @@ fun EditText.atleastOneSpecialCharactersToast(errorMsg: String? = null): Boolean
 }
 
 fun EditText.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
 
                 showToast(errorMsg ?: it)
@@ -487,7 +487,7 @@ fun EditText.atleastOneSpecialCharactersToast(callback: (message: String) -> Uni
 }
 
 fun EditText.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
 
                 showToast(it)

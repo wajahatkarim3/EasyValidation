@@ -279,13 +279,13 @@ fun Spinner.allLowerCaseToast(callback: (message: String) -> Unit): Boolean {
 }
 
 fun Spinner.atleastOneUpperCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneUpperCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun Spinner.atleastOneUpperCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -293,7 +293,7 @@ fun Spinner.atleastOneUpperCaseToast(callback: (message: String) -> Unit, errorM
 }
 
 fun Spinner.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 showToast(it)
                 callback.invoke(it)
@@ -301,13 +301,13 @@ fun Spinner.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Boole
 }
 
 fun Spinner.atleastOneLowerCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneLowerCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun Spinner.atleastOneLowerCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -315,7 +315,7 @@ fun Spinner.atleastOneLowerCaseToast(callback: (message: String) -> Unit, errorM
 }
 
 fun Spinner.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)
@@ -323,13 +323,13 @@ fun Spinner.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Boole
 }
 
 fun Spinner.atleastOneNumberToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg).addErrorCallback {
+    return validator().atLeastOneNumber(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun Spinner.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -337,7 +337,7 @@ fun Spinner.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg:
 }
 
 fun Spinner.atleastOneNumberToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)
@@ -457,13 +457,13 @@ fun Spinner.noSpecialCharactersToast(callback: (message: String) -> Unit): Boole
 }
 
 fun Spinner.atleastOneSpecialCharactersToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg).addErrorCallback {
+    return validator().atLeastOneSpecialCharacters(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun Spinner.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -471,7 +471,7 @@ fun Spinner.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit
 }
 
 fun Spinner.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)

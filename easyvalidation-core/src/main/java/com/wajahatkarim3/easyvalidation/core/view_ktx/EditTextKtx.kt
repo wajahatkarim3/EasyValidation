@@ -2,10 +2,6 @@ package com.wajahatkarim3.easyvalidation.core.view_ktx
 
 import android.widget.EditText
 import com.wajahatkarim3.easyvalidation.core.Validator
-import java.math.BigDecimal
-import java.math.BigInteger
-import java.util.regex.Pattern
-import kotlin.math.max
 
 fun EditText.validator(): Validator {
     return Validator(text.toString())
@@ -222,12 +218,12 @@ fun EditText.numberEqualTo(number: Number, callback: (message: String) -> Unit) 
             }.check()
 }
 
-fun EditText.allUperCase(errorMsg: String? = null) : Boolean
+fun EditText.allUpperCase(errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg).check()
 }
 
-fun EditText.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun EditText.allUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg)
             .addErrorCallback {
@@ -235,7 +231,7 @@ fun EditText.allUperCase(callback: (message: String) -> Unit, errorMsg: String? 
             }.check()
 }
 
-fun EditText.allUperCase(callback: (message: String) -> Unit) : Boolean
+fun EditText.allUpperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allUpperCase()
             .addErrorCallback {
@@ -265,64 +261,64 @@ fun EditText.allLowerCase(callback: (message: String) -> Unit) : Boolean
 }
 
 
-fun EditText.atleastOneUpperCase(errorMsg: String? = null) : Boolean
+fun EditText.atLeastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg).check()
+    return validator().atLeastOneUpperCase(errorMsg).check()
 }
 
-fun EditText.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun EditText.atLeastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun EditText.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
+fun EditText.atLeastOneUpperCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun EditText.atleastOneLowerCase(errorMsg: String? = null) : Boolean
+fun EditText.atLeastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg).check()
+    return validator().atLeastOneLowerCase(errorMsg).check()
 }
 
-fun EditText.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun EditText.atLeastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun EditText.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
+fun EditText.atLeastOneLowerCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun EditText.atleastOneNumber(errorMsg: String? = null) : Boolean
+fun EditText.atLeastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg).check()
+    return validator().atLeastOneNumber(errorMsg).check()
 }
 
-fun EditText.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun EditText.atLeastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun EditText.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
+fun EditText.atLeastOneNumber(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -436,12 +432,12 @@ fun EditText.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 
 fun EditText.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg).check()
+    return validator().atLeastOneSpecialCharacters(errorMsg).check()
 }
 
 fun EditText.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -449,7 +445,7 @@ fun EditText.atleastOneSpecialCharacters(callback: (message: String) -> Unit, er
 
 fun EditText.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()

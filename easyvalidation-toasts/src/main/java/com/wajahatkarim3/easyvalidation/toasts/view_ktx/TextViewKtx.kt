@@ -280,13 +280,13 @@ fun TextView.allLowerCaseToast(callback: (message: String) -> Unit): Boolean {
 }
 
 fun TextView.atleastOneUpperCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneUpperCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun TextView.atleastOneUpperCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -294,7 +294,7 @@ fun TextView.atleastOneUpperCaseToast(callback: (message: String) -> Unit, error
 }
 
 fun TextView.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 showToast(it)
                 callback.invoke(it)
@@ -302,13 +302,13 @@ fun TextView.atleastOneUpperCaseToast(callback: (message: String) -> Unit): Bool
 }
 
 fun TextView.atleastOneLowerCaseToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg).addErrorCallback {
+    return validator().atLeastOneLowerCase(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun TextView.atleastOneLowerCaseToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -316,7 +316,7 @@ fun TextView.atleastOneLowerCaseToast(callback: (message: String) -> Unit, error
 }
 
 fun TextView.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)
@@ -324,13 +324,13 @@ fun TextView.atleastOneLowerCaseToast(callback: (message: String) -> Unit): Bool
 }
 
 fun TextView.atleastOneNumberToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg).addErrorCallback {
+    return validator().atLeastOneNumber(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun TextView.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -338,7 +338,7 @@ fun TextView.atleastOneNumberToast(callback: (message: String) -> Unit, errorMsg
 }
 
 fun TextView.atleastOneNumberToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)
@@ -458,13 +458,13 @@ fun TextView.noSpecialCharactersToast(callback: (message: String) -> Unit): Bool
 }
 
 fun TextView.atleastOneSpecialCharactersToast(errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg).addErrorCallback {
+    return validator().atLeastOneSpecialCharacters(errorMsg).addErrorCallback {
         showToast(errorMsg ?: it)
     }.check()
 }
 
 fun TextView.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit, errorMsg: String? = null): Boolean {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 showToast(errorMsg ?: it)
                 callback.invoke(it)
@@ -472,7 +472,7 @@ fun TextView.atleastOneSpecialCharactersToast(callback: (message: String) -> Uni
 }
 
 fun TextView.atleastOneSpecialCharactersToast(callback: (message: String) -> Unit): Boolean {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 showToast( it)
                 callback.invoke(it)

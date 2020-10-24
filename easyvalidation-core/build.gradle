@@ -64,7 +64,7 @@ dependencies {
 
     // Support
     implementation Deps.support_appcompat_v7
-
+    implementation Deps.support_desgign
     // Unit Testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

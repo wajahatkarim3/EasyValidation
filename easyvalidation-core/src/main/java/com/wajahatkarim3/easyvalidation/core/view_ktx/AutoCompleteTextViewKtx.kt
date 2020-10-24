@@ -2,10 +2,6 @@ package com.wajahatkarim3.easyvalidation.core.view_ktx
 
 import android.widget.AutoCompleteTextView
 import com.wajahatkarim3.easyvalidation.core.Validator
-import java.math.BigDecimal
-import java.math.BigInteger
-import java.util.regex.Pattern
-import kotlin.math.max
 
 fun AutoCompleteTextView.validator() : Validator
 {
@@ -224,12 +220,12 @@ fun AutoCompleteTextView.numberEqualTo(number: Number, callback: (message: Strin
             }.check()
 }
 
-fun AutoCompleteTextView.allUperCase(errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.allUpperCase(errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg).check()
 }
 
-fun AutoCompleteTextView.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.allUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg)
             .addErrorCallback {
@@ -237,7 +233,7 @@ fun AutoCompleteTextView.allUperCase(callback: (message: String) -> Unit, errorM
             }.check()
 }
 
-fun AutoCompleteTextView.allUperCase(callback: (message: String) -> Unit) : Boolean
+fun AutoCompleteTextView.allUpperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allUpperCase()
             .addErrorCallback {
@@ -267,64 +263,64 @@ fun AutoCompleteTextView.allLowerCase(callback: (message: String) -> Unit) : Boo
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneUpperCase(errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.atLeastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg).check()
+    return validator().atLeastOneUpperCase(errorMsg).check()
 }
 
-fun AutoCompleteTextView.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.atLeastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
+fun AutoCompleteTextView.atLeastOneUpperCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneLowerCase(errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.atLeastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg).check()
+    return validator().atLeastOneLowerCase(errorMsg).check()
 }
 
-fun AutoCompleteTextView.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.atLeastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
+fun AutoCompleteTextView.atLeastOneLowerCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneNumber(errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.atLeastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg).check()
+    return validator().atLeastOneNumber(errorMsg).check()
 }
 
-fun AutoCompleteTextView.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun AutoCompleteTextView.atLeastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun AutoCompleteTextView.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
+fun AutoCompleteTextView.atLeastOneNumber(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -438,12 +434,12 @@ fun AutoCompleteTextView.noSpecialCharacters(callback: (message: String) -> Unit
 
 fun AutoCompleteTextView.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg).check()
+    return validator().atLeastOneSpecialCharacters(errorMsg).check()
 }
 
 fun AutoCompleteTextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -451,7 +447,7 @@ fun AutoCompleteTextView.atleastOneSpecialCharacters(callback: (message: String)
 
 fun AutoCompleteTextView.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()

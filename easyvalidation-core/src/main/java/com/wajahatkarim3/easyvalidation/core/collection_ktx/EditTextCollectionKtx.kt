@@ -1,7 +1,6 @@
 package com.wajahatkarim3.easyvalidation.core.collection_ktx
 
 import android.app.Activity
-import android.content.Context
 import android.support.v4.app.Fragment
 import android.widget.EditText
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
@@ -532,7 +531,7 @@ fun Any.allUperCaseList(vararg editTextList: EditText, callback: (view: EditText
     var result = false
     for (edittext in editTextList)
     {
-        result = edittext.allUperCase() {
+        result = edittext.allUpperCase() {
             callback.invoke(edittext, it)
         }
 
@@ -547,7 +546,7 @@ fun Activity.allUperCaseList(vararg editTextIds: Int, callback: (view: EditText,
     var result = false
     for (id in editTextIds)
     {
-        result = findViewById<EditText>(id).allUperCase() {
+        result = findViewById<EditText>(id).allUpperCase() {
             callback.invoke(findViewById<EditText>(id), it)
         }
 
@@ -565,7 +564,7 @@ fun Fragment.allUperCaseList(vararg editTextIds: Int, callback: (view: EditText,
         view?.let { v ->
             for (id in editTextIds)
             {
-                result = v.findViewById<EditText>(id).allUperCase() {
+                result = v.findViewById<EditText>(id).allUpperCase() {
                     callback.invoke(v.findViewById<EditText>(id), it)
                 }
 
@@ -636,7 +635,7 @@ fun Any.atleastOneUpperCaseList(vararg editTextList: EditText, callback: (view: 
     var result = false
     for (edittext in editTextList)
     {
-        result = edittext.atleastOneUpperCase() {
+        result = edittext.atLeastOneUpperCase() {
             callback.invoke(edittext, it)
         }
 
@@ -651,7 +650,7 @@ fun Activity.atleastOneUpperCaseList(vararg editTextIds: Int, callback: (view: E
     var result = false
     for (id in editTextIds)
     {
-        result = findViewById<EditText>(id).atleastOneUpperCase() {
+        result = findViewById<EditText>(id).atLeastOneUpperCase() {
             callback.invoke(findViewById<EditText>(id), it)
         }
 
@@ -669,7 +668,7 @@ fun Fragment.atleastOneUpperCaseList(vararg editTextIds: Int, callback: (view: E
         view?.let { v ->
             for (id in editTextIds)
             {
-                result = v.findViewById<EditText>(id).atleastOneUpperCase() {
+                result = v.findViewById<EditText>(id).atLeastOneUpperCase() {
                     callback.invoke(v.findViewById<EditText>(id), it)
                 }
 
@@ -688,7 +687,7 @@ fun Any.atleastOneLowerCaseList(vararg editTextList: EditText, callback: (view: 
     var result = false
     for (edittext in editTextList)
     {
-        result = edittext.atleastOneLowerCase() {
+        result = edittext.atLeastOneLowerCase() {
             callback.invoke(edittext, it)
         }
 
@@ -703,7 +702,7 @@ fun Activity.atleastOneLowerCaseList(vararg editTextIds: Int, callback: (view: E
     var result = false
     for (id in editTextIds)
     {
-        result = findViewById<EditText>(id).atleastOneLowerCase() {
+        result = findViewById<EditText>(id).atLeastOneLowerCase() {
             callback.invoke(findViewById<EditText>(id), it)
         }
 
@@ -721,7 +720,7 @@ fun Fragment.atleastOneLowerCaseList(vararg editTextIds: Int, callback: (view: E
         view?.let { v ->
             for (id in editTextIds)
             {
-                result = v.findViewById<EditText>(id).atleastOneLowerCase() {
+                result = v.findViewById<EditText>(id).atLeastOneLowerCase() {
                     callback.invoke(v.findViewById<EditText>(id), it)
                 }
 
@@ -740,7 +739,7 @@ fun Any.atleastOneNumberList(vararg editTextList: EditText, callback: (view: Edi
     var result = false
     for (edittext in editTextList)
     {
-        result = edittext.atleastOneNumber() {
+        result = edittext.atLeastOneNumber() {
             callback.invoke(edittext, it)
         }
 
@@ -755,7 +754,7 @@ fun Activity.atleastOneNumberList(vararg editTextIds: Int, callback: (view: Edit
     var result = false
     for (id in editTextIds)
     {
-        result = findViewById<EditText>(id).atleastOneNumber() {
+        result = findViewById<EditText>(id).atLeastOneNumber() {
             callback.invoke(findViewById<EditText>(id), it)
         }
 
@@ -773,7 +772,7 @@ fun Fragment.atleastOneNumberList(vararg editTextIds: Int, callback: (view: Edit
         view?.let { v ->
             for (id in editTextIds)
             {
-                result = v.findViewById<EditText>(id).atleastOneNumber() {
+                result = v.findViewById<EditText>(id).atLeastOneNumber() {
                     callback.invoke(v.findViewById<EditText>(id), it)
                 }
 

@@ -2,10 +2,6 @@ package com.wajahatkarim3.easyvalidation.core.view_ktx
 
 import android.widget.Spinner
 import com.wajahatkarim3.easyvalidation.core.Validator
-import java.math.BigDecimal
-import java.math.BigInteger
-import java.util.regex.Pattern
-import kotlin.math.max
 
 fun Spinner.validator() : Validator
 {
@@ -225,12 +221,12 @@ fun Spinner.numberEqualTo(number: Number, callback: (message: String) -> Unit) :
             }.check()
 }
 
-fun Spinner.allUperCase(errorMsg: String? = null) : Boolean
+fun Spinner.allUpperCase(errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg).check()
 }
 
-fun Spinner.allUperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun Spinner.allUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
     return validator().allUpperCase(errorMsg)
             .addErrorCallback {
@@ -238,7 +234,7 @@ fun Spinner.allUperCase(callback: (message: String) -> Unit, errorMsg: String? =
             }.check()
 }
 
-fun Spinner.allUperCase(callback: (message: String) -> Unit) : Boolean
+fun Spinner.allUpperCase(callback: (message: String) -> Unit) : Boolean
 {
     return validator().allUpperCase()
             .addErrorCallback {
@@ -267,64 +263,64 @@ fun Spinner.allLowerCase(callback: (message: String) -> Unit) : Boolean
             }.check()
 }
 
-fun Spinner.atleastOneUpperCase(errorMsg: String? = null) : Boolean
+fun Spinner.atLeastOneUpperCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg).check()
+    return validator().atLeastOneUpperCase(errorMsg).check()
 }
 
-fun Spinner.atleastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun Spinner.atLeastOneUpperCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneUpperCase(errorMsg)
+    return validator().atLeastOneUpperCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun Spinner.atleastOneUpperCase(callback: (message: String) -> Unit) : Boolean
+fun Spinner.atLeastOneUpperCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneUpperCase()
+    return validator().atLeastOneUpperCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun Spinner.atleastOneLowerCase(errorMsg: String? = null) : Boolean
+fun Spinner.atLeastOneLowerCase(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg).check()
+    return validator().atLeastOneLowerCase(errorMsg).check()
 }
 
-fun Spinner.atleastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun Spinner.atLeastOneLowerCase(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneLowerCase(errorMsg)
+    return validator().atLeastOneLowerCase(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun Spinner.atleastOneLowerCase(callback: (message: String) -> Unit) : Boolean
+fun Spinner.atLeastOneLowerCase(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneLowerCase()
+    return validator().atLeastOneLowerCase()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun Spinner.atleastOneNumber(errorMsg: String? = null) : Boolean
+fun Spinner.atLeastOneNumber(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg).check()
+    return validator().atLeastOneNumber(errorMsg).check()
 }
 
-fun Spinner.atleastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
+fun Spinner.atLeastOneNumber(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneNumber(errorMsg)
+    return validator().atLeastOneNumber(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
 }
 
-fun Spinner.atleastOneNumber(callback: (message: String) -> Unit) : Boolean
+fun Spinner.atLeastOneNumber(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneNumber()
+    return validator().atLeastOneNumber()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -440,12 +436,12 @@ fun Spinner.noSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 
 fun Spinner.atleastOneSpecialCharacters(errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg).check()
+    return validator().atLeastOneSpecialCharacters(errorMsg).check()
 }
 
 fun Spinner.atleastOneSpecialCharacters(callback: (message: String) -> Unit, errorMsg: String? = null) : Boolean
 {
-    return validator().atleastOneSpecialCharacters(errorMsg)
+    return validator().atLeastOneSpecialCharacters(errorMsg)
             .addErrorCallback {
                 callback.invoke(it)
             }.check()
@@ -453,7 +449,7 @@ fun Spinner.atleastOneSpecialCharacters(callback: (message: String) -> Unit, err
 
 fun Spinner.atleastOneSpecialCharacters(callback: (message: String) -> Unit) : Boolean
 {
-    return validator().atleastOneSpecialCharacters()
+    return validator().atLeastOneSpecialCharacters()
             .addErrorCallback {
                 callback.invoke(it)
             }.check()

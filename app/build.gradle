@@ -38,6 +38,7 @@ dependencies {
     implementation Deps.support_appcompat_v7
     implementation Deps.constraint_layout
     implementation Deps.support_annotations
+    implementation Deps.support_desgign
 
     // Unit Testing
     testImplementation 'junit:junit:4.12'
