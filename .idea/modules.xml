@@ -3,9 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EasyValidation.iml" filepath="$PROJECT_DIR$/EasyValidation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EasyValidation-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EasyValidation-app.iml" group="EasyValidation/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EasyValidation_buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/EasyValidation_buildSrc.iml" group="EasyValidation/EasyValidation_buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Hacktoberfest-EasyValidation.iml" filepath="$PROJECT_DIR$/.idea/modules/Hacktoberfest-EasyValidation.iml" group="EasyValidation" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easyvalidation-core/com.wajahatkarim3.easyvalidation-easyvalidation-core.iml" filepath="$PROJECT_DIR$/.idea/modules/easyvalidation-core/com.wajahatkarim3.easyvalidation-easyvalidation-core.iml" group="EasyValidation/easyvalidation-core" />
       <module fileurl="file://$PROJECT_DIR$/easyvalidation-core/easyvalidation-core.iml" filepath="$PROJECT_DIR$/easyvalidation-core/easyvalidation-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easyvalidation-toasts/easyvalidation-toasts.iml" filepath="$PROJECT_DIR$/.idea/modules/easyvalidation-toasts/easyvalidation-toasts.iml" group="EasyValidation/easyvalidation-toasts" />
       <module fileurl="file://$PROJECT_DIR$/ev.iml" filepath="$PROJECT_DIR$/ev.iml" />
     </modules>
   </component>
