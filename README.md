@@ -81,7 +81,7 @@ Add this in app's ```build.gradle``` file:
    implementation "com.wajahatkarim:easyvalidation-core:$ev_version"
 
    // Shows Toasts by default for every validation error
-   implementation "com.wajahatkarim:easyvalidation-core:$ev_version"
+   implementation "com.wajahatkarim:easyvalidation-toasts:$ev_version"
 ```
 
 ## 📄 Documentation
