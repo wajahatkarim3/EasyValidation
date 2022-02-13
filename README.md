@@ -77,7 +77,11 @@ Changes exist in the [releases](https://github.com/wajahatkarim3/EasyValidation/
 Add this in app's ```build.gradle``` file:
 
 ```groovy
-   implementation "com.wajahatkarim:easyvalidation-core:1.0.2"
+   def ev_version = "1.0.4"
+   implementation "com.wajahatkarim:easyvalidation-core:$ev_version"
+
+   // Shows Toasts by default for every validation error
+   implementation "com.wajahatkarim:easyvalidation-core:$ev_version"
 ```
 
 ## 📄 Documentation

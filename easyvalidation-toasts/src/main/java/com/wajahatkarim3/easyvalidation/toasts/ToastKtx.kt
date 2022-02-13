@@ -5,6 +5,5 @@ import android.widget.EditText
 import android.widget.Toast
 
 fun View.showToast(message:String){
-
     Toast.makeText(context.applicationContext, message, Toast.LENGTH_SHORT).show()
 }

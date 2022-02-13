@@ -47,3 +47,4 @@ dependencies {
 
     api project(":easyvalidation-core")
 }
+apply plugin: 'com.vanniktech.maven.publish'
