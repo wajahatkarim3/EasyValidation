@@ -77,7 +77,7 @@ Changes exist in the [releases](https://github.com/wajahatkarim3/EasyValidation/
 Add this in app's ```build.gradle``` file:
 
 ```groovy
-   implementation "com.wajahatkarim3.easyvalidation:easyvalidation-core:1.0.1"
+   implementation "com.wajahatkarim:easyvalidation-core:1.0.2"
 ```
 
 ## 📄 Documentation

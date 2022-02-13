@@ -1,10 +1,10 @@
 package com.wajahatkarim3.easyvalidation_demo
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.wajahatkarim3.easyvalidation.core.collection_ktx.nonEmptyList
 import com.wajahatkarim3.easyvalidation.core.rules.GreaterThanRule
 import com.wajahatkarim3.easyvalidation.core.rules.MinLengthRule

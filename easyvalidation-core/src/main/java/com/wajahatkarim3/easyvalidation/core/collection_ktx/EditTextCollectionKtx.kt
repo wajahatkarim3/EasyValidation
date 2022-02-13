@@ -2,8 +2,8 @@ package com.wajahatkarim3.easyvalidation.core.collection_ktx
 
 import android.app.Activity
 import android.content.Context
-import android.support.v4.app.Fragment
 import android.widget.EditText
+import androidx.fragment.app.Fragment
 import com.wajahatkarim3.easyvalidation.core.view_ktx.*
 
 fun Any.nonEmptyList(vararg editTextList: EditText, callback: (view: EditText, message: String) -> Unit) : Boolean
