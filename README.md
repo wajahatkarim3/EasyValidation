@@ -85,7 +85,7 @@ Add this in app's ```build.gradle``` file:
 ```
 
 ## 📄 Documentation
-Full documentation is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
+The Full documentation of this project is available at [Gitbook](https://wajahatkarim.gitbook.io/easyvalidation/).
 
 ## ⭐️ Features
 * The Validator way validation support. - [Details](https://wajahatkarim.gitbook.io/easyvalidation/usage/untitled)
